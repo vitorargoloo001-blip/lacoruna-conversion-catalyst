@@ -27,6 +27,11 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left">
+            {/* Logo - desktop only */}
+            <div className="hidden lg:block opacity-0 animate-fade-up mb-4">
+              <img src="/logo-lacoruna.png" alt="La Coruña Edifício Residencial" className="h-14 w-auto" />
+            </div>
+
             {/* Badge */}
             <div className="opacity-0 animate-fade-up">
               <span className="inline-block px-4 py-1.5 mb-5 text-sm font-medium border border-primary/30 rounded-full bg-primary/5 text-primary">
