@@ -29,7 +29,7 @@ const Hero = () => {
           <div className="text-center lg:text-left">
             {/* Logo */}
             <div className="opacity-0 animate-fade-up mb-2 lg:mb-4">
-              <img src="/logo-lacoruna.png" alt="La Coruña Edifício Residencial" className="h-28 sm:h-32 lg:h-36 w-auto mx-auto lg:mx-0" />
+              <img src="/logo-lacoruna.png" alt="La Coruña Edifício Residencial" className="h-36 sm:h-40 lg:h-48 w-auto mx-auto lg:mx-0" />
             </div>
 
             {/* Badge */}
