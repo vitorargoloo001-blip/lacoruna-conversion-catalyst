@@ -89,11 +89,11 @@ const Hero = () => {
 
           {/* Facade Image */}
           <div className="opacity-0 animate-fade-up delay-200 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl max-h-[75vh]">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src={fachada} 
                 alt="Fachada do La Coruña - Edifício residencial moderno em São Bernardo do Campo"
-                className="w-full h-full object-cover"
+                className="w-auto max-h-[78vh] mx-auto object-contain"
                 fetchPriority="high"
                 width={1024}
                 height={1408}
