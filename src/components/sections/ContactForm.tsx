@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowRight, MessageSquare, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import logoVertical from "@/assets/logo-lacoruna-vertical.png";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -97,8 +98,8 @@ const ContactForm = () => {
             <div className="absolute -top-px left-20 right-20 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
             
             <div className="relative z-10">
-              <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-primary flex items-center justify-center mb-8 shadow-glow">
-                <MessageSquare className="w-8 h-8 text-primary-foreground" />
+              <div className="w-20 h-20 mx-auto mb-8">
+                <img src={logoVertical} alt="La Coruña" className="w-full h-full object-contain" />
               </div>
 
               <div className="text-center mb-10">
