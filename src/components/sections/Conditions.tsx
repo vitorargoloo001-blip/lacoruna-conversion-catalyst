@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const conditions = [
@@ -9,7 +9,7 @@ const conditions = [
 
 const Conditions = () => {
   return (
-    <section id="condicoes" className="relative py-20 sm:py-24 bg-[hsl(221_40%_48%/0.06)]">
+    <section id="condicoes" className="relative py-24 sm:py-32 bg-gradient-subtle">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
       <div className="container px-6">
@@ -19,7 +19,7 @@ const Conditions = () => {
             <span className="inline-block px-4 py-2 mb-6 text-sm font-medium border border-primary/30 rounded-full bg-primary/5 text-primary">
               Condições Especiais
             </span>
-            <h2 className="text-3xl sm:text-[42px] md:text-5xl font-bold font-heading leading-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">
               Condições especiais
               <br />
               <span className="text-gradient">de lançamento.</span>
@@ -32,7 +32,7 @@ const Conditions = () => {
               {conditions.map((condition, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border/50 shadow-card transition-all duration-300 hover:border-primary/40 hover:shadow-lg"
+                  className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border/50 transition-all duration-300 hover:border-primary/40 hover:shadow-card"
                 >
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
                   <span className="text-base font-medium">{condition}</span>

@@ -6,7 +6,9 @@ import {
   Puzzle, 
   PartyPopper, 
   Car,
+  Building2,
   ArrowUpDown,
+  TreePine
 } from "lucide-react";
 import piscina from "@/assets/piscina.jpg";
 import churrasqueira from "@/assets/churrasqueira.jpg";
@@ -16,70 +18,84 @@ const amenities = [
   { icon: PartyPopper, name: "Salão de Festas" },
   { icon: Flame, name: "Churrasqueira" },
   { icon: Puzzle, name: "Playground" },
+  { icon: Car, name: "Estacionamento organizado" },
+  { icon: ArrowUpDown, name: "Quadra" },
 ];
 
 const Amenities = () => {
   return (
-    <section id="lazer" className="relative py-20 sm:py-24 bg-[hsl(221_40%_48%/0.06)]">
+    <section id="lazer" className="relative py-24 sm:py-32 bg-gradient-subtle">
+      {/* Decorative element */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       
       <div className="container px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Section header */}
-          <div className="text-center mb-10">
+          <div className="text-center mb-16">
             <span className="inline-block px-4 py-2 mb-6 text-sm font-medium border border-primary/30 rounded-full bg-primary/5 text-primary">
               Lazer Completo
             </span>
-            <h2 className="text-3xl sm:text-[42px] md:text-5xl font-bold font-heading leading-tight mb-4">
-              O lazer que sua família
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">
+              Lazer completo para
               <br />
-              <span className="text-gradient">merece ter em casa.</span>
+              <span className="text-gradient">todas as fases da vida.</span>
             </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              O La Coruña oferece uma estrutura pensada para reunir família e amigos sem sair de casa.
+            </p>
           </div>
 
-          {/* Hero image full width */}
-          <div className="rounded-2xl overflow-hidden shadow-lg mb-12">
-            <img 
-              src={piscina} 
-              alt="Piscina do La Coruña - Área de lazer completa"
-              className="w-full h-[300px] sm:h-[400px] object-cover"
-              loading="lazy"
-              width={1200}
-              height={400}
-            />
-          </div>
-
-          {/* Amenities grid - reduced to 4 */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 sm:gap-6 mb-12">
+          {/* Amenities grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6">
             {amenities.map((amenity, index) => (
               <div
                 key={index}
-                className="group p-6 sm:p-8 rounded-2xl bg-card border border-border/50 shadow-card transition-all duration-300 hover:border-primary/40 hover:shadow-lg text-center"
+                className="group p-5 sm:p-6 rounded-xl bg-card border border-border/50 transition-all duration-300 hover:border-primary/40 hover:shadow-card text-center"
               >
-                <div className="w-14 h-14 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
-                  <amenity.icon className="w-7 h-7 text-primary" />
+                <div className="w-12 h-12 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-3 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
+                  <amenity.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold font-heading group-hover:text-primary transition-colors">
+                <h3 className="text-sm sm:text-base font-semibold font-heading group-hover:text-primary transition-colors">
                   {amenity.name}
                 </h3>
               </div>
             ))}
           </div>
 
-          {/* Second image */}
-          <div className="rounded-2xl overflow-hidden shadow-lg mb-12">
-            <img 
-              src={churrasqueira} 
-              alt="Churrasqueira do La Coruña - Espaço gourmet"
-              className="w-full h-[300px] sm:h-[400px] object-cover"
-              loading="lazy"
-              width={1200}
-              height={400}
-            />
+          {/* Highlight card */}
+          <div className="mt-12 p-8 sm:p-10 rounded-2xl bg-gradient-primary text-primary-foreground text-center">
+            <Building2 className="w-10 h-10 mx-auto mb-4 opacity-80" />
+            <p className="text-xl sm:text-2xl font-bold font-heading">
+              Um espaço onde sua rotina se transforma em qualidade de vida.
+            </p>
+          </div>
+
+          {/* Images */}
+          <div className="mt-12 grid sm:grid-cols-2 gap-6">
+            <div className="rounded-2xl bg-card border border-border/50 aspect-video overflow-hidden">
+              <img 
+                src={piscina} 
+                alt="Piscina do La Coruña - Área de lazer com piscina"
+                className="w-full h-full object-cover"
+                loading="lazy"
+                width={1024}
+                height={576}
+              />
+            </div>
+            <div className="rounded-2xl bg-card border border-border/50 aspect-video overflow-hidden">
+              <img 
+                src={churrasqueira} 
+                alt="Churrasqueira do La Coruña - Espaço gourmet"
+                className="w-full h-full object-cover"
+                loading="lazy"
+                width={1024}
+                height={576}
+              />
+            </div>
           </div>
 
           {/* CTA */}
-          <div className="text-center">
+          <div className="text-center mt-12">
             <Button variant="hero" size="xl" asChild>
               <a href="#contato">
                 Quero condições especiais

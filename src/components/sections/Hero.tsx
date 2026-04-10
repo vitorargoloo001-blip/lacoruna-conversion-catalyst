@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin, Building2, Car, Layers, Home, AlertTriangle } from "lucide-react";
+import { ArrowRight, MapPin, Building2, Car, Layers, Home } from "lucide-react";
 const fachada = "/fachada.png";
 
 const Hero = () => {
   return (
-    <section className="relative h-[92vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-radial opacity-60" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
@@ -19,57 +19,56 @@ const Hero = () => {
         }}
       />
 
-      <div className="container relative z-10 px-6">
+      <div className="container relative z-10 px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left">
             {/* Badge */}
             <div className="opacity-0 animate-fade-up">
-              <span className="inline-block px-4 py-2 mb-6 text-sm font-medium border border-primary/30 rounded-full bg-primary/5 text-primary">
+              <span className="inline-block px-4 py-2 mb-8 text-sm font-medium border border-primary/30 rounded-full bg-primary/5 text-primary">
                 Lançamento Jardim Celeste — São Bernardo do Campo
               </span>
             </div>
 
             {/* Main heading */}
-            <h1 className="opacity-0 animate-fade-up delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-[60px] font-bold font-heading leading-[1.1] mb-6">
+            <h1 className="opacity-0 animate-fade-up delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6">
               Os 2 dormitórios mais{" "}
               <span className="text-gradient">COMPLETO</span>
               <br />
               de <span className="text-gradient">São Bernardo.</span>
             </h1>
 
-            {/* Bullet points - emotional */}
-            <div className="opacity-0 animate-fade-up delay-200 space-y-2 mb-6 max-w-lg mx-auto lg:mx-0">
+            {/* Subtitle */}
+            <p className="opacity-0 animate-fade-up delay-200 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-4 leading-relaxed">
+              Torre única • Elevador • Varanda • Vaga coberta • Lazer completo.
+              <br />
+              <span className="text-foreground font-medium">Condições especiais pelo Minha Casa Minha Vida.</span>
+            </p>
+
+            {/* Strategic complement */}
+            <p className="opacity-0 animate-fade-up delay-200 text-base text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-6 leading-relaxed">
+              A oportunidade de conquistar seu primeiro apartamento em uma das regiões que mais cresce em SBC.
+            </p>
+
+            {/* Highlight badges */}
+            <div className="opacity-0 animate-fade-up delay-200 flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-6">
               {[
-                "Torre única com elevador",
-                "Vaga coberta garantida",
-                "Lazer completo para sua família",
-                "Condições exclusivas de lançamento",
+                { icon: Building2, text: "Torre Única" },
+                { icon: Car, text: "Vaga Coberta" },
+                { icon: Layers, text: "Lazer Completo" },
+                { icon: Home, text: "Minha Casa Minha Vida" },
               ].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-base sm:text-lg text-foreground">
-                  <span className="text-primary font-bold">→</span>
-                  <span>{item}</span>
-                </div>
+                <span key={item.text} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full border border-primary/20">
+                  <item.icon className="w-3.5 h-3.5" />
+                  {item.text}
+                </span>
               ))}
             </div>
 
-            {/* Urgency trigger */}
-            <div className="opacity-0 animate-fade-up delay-200 mb-6">
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/15 text-accent border border-accent/30 text-sm font-bold rounded-full">
-                <AlertTriangle className="w-4 h-4" />
-                Unidades limitadas
-              </span>
-            </div>
-
-            {/* Strategic complement */}
-            <p className="opacity-0 animate-fade-up delay-200 text-lg sm:text-xl text-foreground font-semibold max-w-2xl mx-auto lg:mx-0 mb-4">
-              💰 Saia do aluguel pagando parcelas a partir de R$ 600.
-            </p>
-
             {/* Location badge */}
-            <div className="opacity-0 animate-fade-up delay-300 flex items-center justify-center lg:justify-start gap-2 mb-8 text-muted-foreground">
+            <div className="opacity-0 animate-fade-up delay-200 flex items-center justify-center lg:justify-start gap-2 mb-10 text-muted-foreground">
               <MapPin className="w-4 h-4 text-primary" />
-              <span className="text-sm">Rua Jorge Cândido Marin x Rua Japão — Jd. Celeste, SBC</span>
+              <span className="text-sm">Rua Jorge Cândido Marin x Rua Japão — Jd. Celeste, São Bernardo do Campo - SP</span>
             </div>
 
             {/* CTA Buttons */}
@@ -100,15 +99,17 @@ const Hero = () => {
                 width={1024}
                 height={1408}
               />
+              {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
+            {/* Decorative elements */}
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
             <div className="absolute -top-4 -left-4 w-20 h-20 bg-accent/20 rounded-full blur-2xl" />
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in delay-500">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in delay-500">
           <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center p-2">
             <div className="w-1 h-2 bg-primary rounded-full animate-bounce" />
           </div>
