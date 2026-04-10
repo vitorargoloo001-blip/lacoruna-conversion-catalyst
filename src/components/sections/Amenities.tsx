@@ -55,7 +55,7 @@ const Amenities = () => {
                 <div className="w-12 h-12 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-3 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
                   <amenity.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-sm sm:text-base font-semibold font-heading group-hover:text-primary transition-colors">
+                <h3 className="text-sm sm:text-base font-semibold font-body group-hover:text-primary transition-colors">
                   {amenity.name}
                 </h3>
               </div>

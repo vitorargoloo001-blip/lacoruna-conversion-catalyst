@@ -73,8 +73,8 @@ const TechnicalSheet = () => {
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-primary/20">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <p className="text-sm text-muted-foreground mb-1">{item.label}</p>
-                <p className="text-lg font-bold font-heading group-hover:text-primary transition-colors">
+                <p className="text-sm text-muted-foreground font-body mb-1">{item.label}</p>
+                <p className="text-lg font-semibold font-body group-hover:text-primary transition-colors">
                   {item.value}
                 </p>
               </div>
@@ -87,7 +87,7 @@ const TechnicalSheet = () => {
             <p className="text-xl sm:text-2xl font-bold font-heading">
               Programa Minha Casa Minha Vida
             </p>
-            <p className="text-lg mt-2 opacity-90">
+            <p className="text-lg mt-2 opacity-90 font-body">
               Aceita FGTS • Parcelas a partir de R$ 600 • A partir de R$ 360.000
             </p>
           </div>
