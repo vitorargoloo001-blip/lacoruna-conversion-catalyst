@@ -86,12 +86,6 @@ const Hero = () => {
               </Button>
             </div>
 
-            {/* Price info */}
-            <div className="opacity-0 animate-fade-up delay-400 mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 text-sm text-muted-foreground">
-              <span>A partir de <strong className="text-foreground text-lg">R$ 360.000</strong></span>
-              <span className="hidden sm:inline">•</span>
-              <span>Parcelas a partir de <strong className="text-foreground text-lg">R$ 600</strong></span>
-            </div>
           </div>
 
           {/* Facade Image */}
