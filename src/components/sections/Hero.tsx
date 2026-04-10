@@ -5,10 +5,14 @@ const fachada = "/fachada.png";
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-gradient-radial opacity-60" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse-glow delay-1000" />
+      {/* Soft blue radial gradient behind building */}
+      <div className="absolute inset-0" style={{
+        background: `
+          radial-gradient(ellipse 70% 70% at 65% 50%, #DCE8FF 0%, transparent 70%),
+          linear-gradient(180deg, hsl(var(--background)) 0%, #EDF2FC 40%, #E9F1FF 60%, hsl(var(--background)) 100%)
+        `
+      }} />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/8 rounded-full blur-3xl animate-pulse-glow" />
       
       {/* Grid pattern overlay */}
       <div 
@@ -94,18 +98,33 @@ const Hero = () => {
                 src={fachada} 
                 alt="Fachada do La Coruña - Edifício residencial moderno em São Bernardo do Campo"
                 className="w-auto max-h-[78vh] mx-auto object-contain"
+                style={{
+                  filter: 'contrast(1.08) saturate(1.12) brightness(1.02)',
+                }}
                 fetchPriority="high"
                 width={1024}
                 height={1408}
               />
-              {/* Edge blend gradients */}
+              {/* Subtle edge blend - not white, matches blue gradient bg */}
               <div className="absolute inset-0 pointer-events-none" style={{
                 background: `
-                  linear-gradient(to right, hsl(var(--background)) 0%, transparent 15%),
-                  linear-gradient(to left, hsl(var(--background)) 0%, transparent 15%),
-                  linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 10%),
-                  linear-gradient(to top, hsl(var(--background)) 0%, transparent 20%)
+                  linear-gradient(to right, #E9F1FF 0%, transparent 8%),
+                  linear-gradient(to left, #E9F1FF 0%, transparent 8%),
+                  linear-gradient(to bottom, transparent 0%, transparent 85%, #E9F1FFcc 100%)
                 `
+              }} />
+              {/* Architectural ground shadow */}
+              <div className="absolute bottom-0 left-[10%] right-[10%] h-8 pointer-events-none" style={{
+                background: 'radial-gradient(ellipse at center, hsl(221 40% 30% / 0.15) 0%, transparent 70%)',
+                filter: 'blur(6px)',
+              }} />
+              {/* Warm glow on lower portion */}
+              <div className="absolute bottom-[5%] left-[20%] right-[20%] h-[20%] pointer-events-none" style={{
+                background: 'radial-gradient(ellipse at center bottom, hsl(30 60% 70% / 0.08) 0%, transparent 70%)',
+              }} />
+              {/* Subtle vignette */}
+              <div className="absolute inset-0 pointer-events-none" style={{
+                background: 'radial-gradient(ellipse at center, transparent 50%, hsl(221 40% 48% / 0.04) 100%)',
               }} />
             </div>
           </div>
