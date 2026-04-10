@@ -39,10 +39,15 @@ const Hero = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className="opacity-0 animate-fade-up delay-200 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-6 leading-relaxed">
+            <p className="opacity-0 animate-fade-up delay-200 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-4 leading-relaxed">
               Torre única • Elevador • Varanda • Vaga coberta • Lazer completo.
               <br />
-              <span className="text-foreground font-medium">Condições especiais de lançamento.</span>
+              <span className="text-foreground font-medium">Condições especiais pelo Minha Casa Minha Vida.</span>
+            </p>
+
+            {/* Strategic complement */}
+            <p className="opacity-0 animate-fade-up delay-200 text-base text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-6 leading-relaxed">
+              A oportunidade de conquistar seu primeiro apartamento em uma das regiões que mais cresce em SBC.
             </p>
 
             {/* Highlight badges */}

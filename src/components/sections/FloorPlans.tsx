@@ -7,7 +7,7 @@ import plantaFinal0102 from "@/assets/planta-final-01-02.png";
 const floorPlans = [
   {
     id: "03/04",
-    title: "Finais 03/04",
+    title: "Finais 03 e 04",
     type: "2 dormitórios com varanda",
     areas: ["42,415 m²"],
     highlight: "2 Dormitórios",
@@ -15,13 +15,21 @@ const floorPlans = [
   },
   {
     id: "01/02",
-    title: "Finais 01/02",
+    title: "Finais 01 e 02",
     type: "2 dormitórios com varanda",
     areas: ["42,565 m²"],
     highlight: "2 Dormitórios",
     featured: true,
     image: plantaFinal0102,
   },
+];
+
+const features = [
+  "2 dormitórios",
+  "Sala integrada",
+  "Cozinha funcional",
+  "Banheiro bem distribuído",
+  "Varanda",
 ];
 
 const FloorPlans = () => {
@@ -38,12 +46,25 @@ const FloorPlans = () => {
               Plantas e Tipologias
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">
-              Escolha o apartamento
+              Plantas inteligentes,
               <br />
-              <span className="text-gradient">ideal para você.</span>
+              <span className="text-gradient">espaços bem distribuídos.</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              2 dormitórios com varanda, elevador e vaga coberta. Plantas inteligentes pensadas para o seu estilo de vida.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
+              Com metragens de aproximadamente 42m², o La Coruña oferece dois tipos de planta com excelente aproveitamento interno.
+            </p>
+
+            {/* Features list */}
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              {features.map((feature) => (
+                <span key={feature} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full border border-primary/20">
+                  {feature}
+                </span>
+              ))}
+            </div>
+
+            <p className="text-base text-muted-foreground mt-6 max-w-xl mx-auto">
+              Um projeto pensado para caber no seu orçamento e na sua vida.
             </p>
           </div>
 
@@ -117,7 +138,7 @@ const FloorPlans = () => {
           <div className="text-center mt-12">
             <Button variant="hero" size="xl" asChild>
               <a href="#contato">
-                Solicitar plantas detalhadas
+                Ver planta ampliada
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>

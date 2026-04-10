@@ -23,10 +23,12 @@ const Footer = () => {
             <div>
               <h3 className="font-bold font-heading mb-4 text-base">Navegação</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#empreendimento" className="hover:text-primary transition-colors">O Empreendimento</a></li>
+                <li><a href="#diferenciais" className="hover:text-primary transition-colors">Diferenciais</a></li>
                 <li><a href="#lazer" className="hover:text-primary transition-colors">Lazer</a></li>
                 <li><a href="#plantas" className="hover:text-primary transition-colors">Plantas</a></li>
                 <li><a href="#localizacao" className="hover:text-primary transition-colors">Localização</a></li>
-                <li><a href="#ficha-tecnica" className="hover:text-primary transition-colors">Ficha Técnica</a></li>
+                <li><a href="#condicoes" className="hover:text-primary transition-colors">Condições</a></li>
                 <li><a href="#contato" className="hover:text-primary transition-colors">Contato</a></li>
               </ul>
             </div>
