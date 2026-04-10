@@ -119,15 +119,15 @@ const FloorPlans = () => {
                 </span>
 
                 {/* Floor plan image */}
-                <div className="mt-4 rounded-lg bg-secondary/30 aspect-[4/3] overflow-hidden">
+                <div className="mt-4 rounded-lg bg-white aspect-square overflow-hidden">
                   <img 
                     src={plan.image} 
                     alt={`Planta 3D do apartamento ${plan.id} - ${plan.type}`}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
                     width={1024}
-                    height={768}
+                    height={1024}
                   />
                 </div>
               </div>
