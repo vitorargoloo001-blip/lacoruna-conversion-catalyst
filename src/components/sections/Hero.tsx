@@ -32,7 +32,7 @@ const Hero = () => {
 
             {/* Main heading */}
             <h1 className="opacity-0 animate-fade-up delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6">
-              O 2 dormitórios mais{" "}
+              Os 2 dormitórios mais{" "}
               <span className="text-gradient">COMPLETO</span>
               <br />
               de <span className="text-gradient">São Bernardo.</span>
