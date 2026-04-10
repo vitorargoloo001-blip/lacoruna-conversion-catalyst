@@ -5,8 +5,6 @@ const conditions = [
   "Minha Casa Minha Vida",
   "Utilize seu FGTS",
   "Entrada facilitada",
-  "Parcelas a partir de R$ 600*",
-  "A partir de R$ 360.000",
 ];
 
 const Conditions = () => {
