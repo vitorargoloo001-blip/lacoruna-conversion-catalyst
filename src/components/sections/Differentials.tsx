@@ -61,10 +61,10 @@ const Differentials = () => {
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
                   <item.icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold font-heading mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-semibold font-body mb-2 group-hover:text-primary transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground font-body" style={{ lineHeight: 1.6 }}>
                   {item.description}
                 </p>
               </div>

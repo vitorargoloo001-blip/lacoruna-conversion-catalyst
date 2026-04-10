@@ -97,8 +97,8 @@ const FloorPlans = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-bold font-heading mb-2">{plan.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{plan.type}</p>
+                <h3 className="text-lg font-semibold font-body mb-2">{plan.title}</h3>
+                <p className="text-sm text-muted-foreground font-body mb-4">{plan.type}</p>
 
                 {/* Areas */}
                 <div className="flex flex-wrap gap-2 mb-4">

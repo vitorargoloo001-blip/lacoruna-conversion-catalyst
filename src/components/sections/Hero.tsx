@@ -31,15 +31,16 @@ const Hero = () => {
             </div>
 
             {/* Main heading */}
-            <h1 className="opacity-0 animate-fade-up delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6">
-              Os 2 dormitórios mais{" "}
-              <span className="text-gradient">COMPLETO</span>
+            <h1 className="opacity-0 animate-fade-up delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading tracking-wide mb-8" style={{ lineHeight: 1.05 }}>
+              Os 2 dormitórios mais
+              <br />
+              <span className="text-gradient">COMPLETOS</span>
               <br />
               de <span className="text-gradient">São Bernardo.</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="opacity-0 animate-fade-up delay-200 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-4 leading-relaxed">
+            <p className="opacity-0 animate-fade-up delay-200 text-lg sm:text-xl text-muted-foreground font-body max-w-2xl mx-auto lg:mx-0 mb-4" style={{ lineHeight: 1.6 }}>
               Torre única • Elevador • Varanda • Vaga coberta • Lazer completo.
               <br />
               <span className="text-foreground font-medium">Condições especiais pelo Minha Casa Minha Vida.</span>
