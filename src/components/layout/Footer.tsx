@@ -1,4 +1,5 @@
 import { Phone } from "lucide-react";
+import logoLaCoruna from "@/assets/logo-lacoruna.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,9 +12,7 @@ const Footer = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {/* Brand */}
             <div>
-              <span className="text-xl font-bold font-heading block mb-4">
-                La <span className="text-gradient">Coruña</span>
-              </span>
+              <img src={logoLaCoruna} alt="La Coruña - Edifício Residencial" className="h-10 w-auto mb-4" />
               <p className="text-sm text-muted-foreground leading-relaxed">
                 O 2 dormitórios mais completo de São Bernardo do Campo. Torre única com varanda, elevador, vaga coberta e lazer completo.
               </p>
