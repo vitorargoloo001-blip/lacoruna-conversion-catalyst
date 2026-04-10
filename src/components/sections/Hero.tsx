@@ -36,7 +36,7 @@ const Hero = () => {
               <br />
               <span className="text-gradient-accent">COMPLETOS</span>
               <br />
-              de <span className="text-gradient-accent">São Bernardo.</span>
+              <span className="text-gradient-accent">de São Bernardo.</span>
             </h1>
 
             {/* Subtitle */}
