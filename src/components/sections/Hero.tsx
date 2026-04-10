@@ -89,7 +89,7 @@ const Hero = () => {
 
           {/* Facade Image */}
           <div className="opacity-0 animate-fade-up delay-200 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative">
               <img 
                 src={fachada} 
                 alt="Fachada do La Coruña - Edifício residencial moderno em São Bernardo do Campo"
@@ -98,12 +98,16 @@ const Hero = () => {
                 width={1024}
                 height={1408}
               />
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+              {/* Edge blend gradients */}
+              <div className="absolute inset-0 pointer-events-none" style={{
+                background: `
+                  linear-gradient(to right, hsl(var(--background)) 0%, transparent 15%),
+                  linear-gradient(to left, hsl(var(--background)) 0%, transparent 15%),
+                  linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 10%),
+                  linear-gradient(to top, hsl(var(--background)) 0%, transparent 20%)
+                `
+              }} />
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
-            <div className="absolute -top-4 -left-4 w-20 h-20 bg-accent/20 rounded-full blur-2xl" />
           </div>
         </div>
 
