@@ -34,9 +34,9 @@ const Hero = () => {
             <h1 className="opacity-0 animate-fade-up delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading tracking-wide mb-8" style={{ lineHeight: 1.05 }}>
               Os 2 dormitórios mais
               <br />
-              <span className="text-gradient">COMPLETOS</span>
+              <span className="text-gradient-accent">COMPLETOS</span>
               <br />
-              de <span className="text-gradient">São Bernardo.</span>
+              de <span className="text-gradient-accent">São Bernardo.</span>
             </h1>
 
             {/* Subtitle */}
