@@ -79,7 +79,7 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(false)}
           />
           <nav 
-            className={`absolute right-0 top-0 h-full w-3/4 max-w-xs bg-background border-l border-border/50 shadow-xl py-8 px-6 transition-transform duration-300 ease-out ${
+            className={`absolute right-0 top-0 h-full w-3/4 max-w-xs bg-white border-l border-border/50 shadow-xl py-8 px-6 transition-transform duration-300 ease-out ${
               isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
