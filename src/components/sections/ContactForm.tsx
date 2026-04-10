@@ -1,0 +1,227 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { ArrowRight, MessageSquare, CheckCircle } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+
+const ContactForm = () => {
+  const { toast } = useToast();
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    whatsapp: "",
+    income: "",
+    interest: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.name.trim() || !formData.whatsapp.trim()) {
+      toast({
+        title: "Campos obrigatórios",
+        description: "Por favor, preencha seu nome e WhatsApp.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead', {
+        content_name: 'Formulário de Contato - La Coruña',
+        content_category: formData.interest || 'Não especificado',
+      });
+    }
+
+    setIsSubmitted(true);
+    toast({
+      title: "Mensagem enviada!",
+      description: "Em breve entraremos em contato com você.",
+    });
+
+    const whatsappMessage = encodeURIComponent(
+      `Olá! Me chamo ${formData.name} e tenho interesse no La Coruña. ${formData.message}`
+    );
+    setTimeout(() => {
+      window.open(`https://wa.me/5511999999999?text=${whatsappMessage}`, "_blank");
+    }, 2000);
+  };
+
+  if (isSubmitted) {
+    return (
+      <section id="contato" className="relative py-24 sm:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-radial opacity-50" />
+        <div className="container px-6 relative z-10">
+          <div className="max-w-xl mx-auto">
+            <div className="p-8 sm:p-12 rounded-3xl bg-card border border-border/50 shadow-card text-center">
+              <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-primary flex items-center justify-center mb-6 shadow-glow">
+                <CheckCircle className="w-10 h-10 text-primary-foreground" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold font-heading mb-4">
+                Mensagem enviada!
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                Em breve nossa equipe entrará em contato. Você será redirecionado para o WhatsApp.
+              </p>
+              <Button
+                variant="heroOutline"
+                onClick={() => setIsSubmitted(false)}
+              >
+                Enviar outra mensagem
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section id="contato" className="relative py-24 sm:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-radial opacity-50" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
+      
+      <div className="container px-6 relative z-10">
+        <div className="max-w-3xl mx-auto">
+          <div className="p-8 sm:p-12 lg:p-16 rounded-3xl bg-card border border-border/50 shadow-card relative overflow-hidden">
+            <div className="absolute inset-0 rounded-3xl border border-primary/20" />
+            <div className="absolute -top-px left-20 right-20 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+            
+            <div className="relative z-10">
+              <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-primary flex items-center justify-center mb-8 shadow-glow">
+                <MessageSquare className="w-8 h-8 text-primary-foreground" />
+              </div>
+
+              <div className="text-center mb-10">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">
+                  Fale com um
+                  <br />
+                  <span className="text-gradient">especialista</span>
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+                  Preencha o formulário e receba mais informações sobre o La Coruña.
+                </p>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                      Nome completo *
+                    </label>
+                    <Input
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="Seu nome"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="bg-secondary/50 border-border/50"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="whatsapp" className="block text-sm font-medium mb-2">
+                      WhatsApp *
+                    </label>
+                    <Input
+                      id="whatsapp"
+                      name="whatsapp"
+                      type="tel"
+                      placeholder="(11) 99999-9999"
+                      value={formData.whatsapp}
+                      onChange={handleChange}
+                      className="bg-secondary/50 border-border/50"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="income" className="block text-sm font-medium mb-2">
+                      Faixa de renda
+                    </label>
+                    <select
+                      id="income"
+                      name="income"
+                      value={formData.income}
+                      onChange={handleChange}
+                      className="flex h-10 w-full rounded-md border border-border/50 bg-secondary/50 px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
+                      <option value="">Selecione</option>
+                      <option value="ate-5k">Até R$ 5.000</option>
+                      <option value="5k-10k">R$ 5.000 - R$ 10.000</option>
+                      <option value="10k-15k">R$ 10.000 - R$ 15.000</option>
+                      <option value="acima-15k">Acima de R$ 15.000</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="interest" className="block text-sm font-medium mb-2">
+                      Utiliza FGTS?
+                    </label>
+                    <select
+                      id="interest"
+                      name="interest"
+                      value={formData.interest}
+                      onChange={handleChange}
+                      className="flex h-10 w-full rounded-md border border-border/50 bg-secondary/50 px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
+                      <option value="">Selecione</option>
+                      <option value="sim-fgts">Sim</option>
+                      <option value="nao-fgts">Não</option>
+                      <option value="nao-sei">Não sei</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    Mensagem (opcional)
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    placeholder="Conte-nos mais sobre o que você procura..."
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    className="bg-secondary/50 border-border/50"
+                  />
+                </div>
+
+                <Button variant="hero" size="xl" type="submit" className="w-full">
+                  Quero condições especiais
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+
+                <p className="text-center text-sm text-muted-foreground">
+                  Ou entre em contato diretamente pelo{" "}
+                  <a
+                    href="https://wa.me/5511999999999"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline hover:text-accent"
+                  >
+                    WhatsApp
+                  </a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactForm;
