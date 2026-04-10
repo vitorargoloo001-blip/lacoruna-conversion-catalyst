@@ -15,10 +15,12 @@ const Header = () => {
   }, []);
 
   const navLinks = [
+    { href: "#empreendimento", label: "O Empreendimento" },
+    { href: "#diferenciais", label: "Diferenciais" },
     { href: "#lazer", label: "Lazer" },
     { href: "#plantas", label: "Plantas" },
     { href: "#localizacao", label: "Localização" },
-    { href: "#ficha-tecnica", label: "Ficha Técnica" },
+    { href: "#condicoes", label: "Condições" },
     { href: "#contato", label: "Contato" },
   ];
 

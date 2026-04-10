@@ -18,10 +18,8 @@ const amenities = [
   { icon: PartyPopper, name: "Salão de Festas" },
   { icon: Flame, name: "Churrasqueira" },
   { icon: Puzzle, name: "Playground" },
-  { icon: Car, name: "Vaga Coberta" },
-  { icon: ArrowUpDown, name: "Elevador" },
-  { icon: Building2, name: "Torre Única" },
-  { icon: TreePine, name: "Área Verde" },
+  { icon: Car, name: "Estacionamento organizado" },
+  { icon: ArrowUpDown, name: "Quadra" },
 ];
 
 const Amenities = () => {
@@ -38,17 +36,17 @@ const Amenities = () => {
               Lazer Completo
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">
-              Tudo que sua família precisa,
+              Lazer completo para
               <br />
-              <span className="text-gradient">em um só lugar.</span>
+              <span className="text-gradient">todas as fases da vida.</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Áreas de lazer pensadas para toda a família, com piscina, churrasqueira e espaços completos de convivência.
+              O La Coruña oferece uma estrutura pensada para reunir família e amigos sem sair de casa.
             </p>
           </div>
 
           {/* Amenities grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6">
             {amenities.map((amenity, index) => (
               <div
                 key={index}
@@ -68,10 +66,7 @@ const Amenities = () => {
           <div className="mt-12 p-8 sm:p-10 rounded-2xl bg-gradient-primary text-primary-foreground text-center">
             <Building2 className="w-10 h-10 mx-auto mb-4 opacity-80" />
             <p className="text-xl sm:text-2xl font-bold font-heading">
-              Torre única com apenas 52 unidades
-            </p>
-            <p className="text-lg mt-2 opacity-90">
-              Mais exclusividade e tranquilidade para o seu dia a dia
+              Um espaço onde sua rotina se transforma em qualidade de vida.
             </p>
           </div>
 

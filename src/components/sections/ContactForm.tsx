@@ -103,12 +103,12 @@ const ContactForm = () => {
 
               <div className="text-center mb-10">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">
-                  Fale com um
+                  Seu novo capítulo
                   <br />
-                  <span className="text-gradient">especialista</span>
+                  <span className="text-gradient">começa aqui.</span>
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-                  Preencha o formulário e receba mais informações sobre o La Coruña.
+                  Converse com um especialista e descubra como conquistar seu apartamento no La Coruña com condições exclusivas de lançamento.
                 </p>
               </div>
 
@@ -199,10 +199,17 @@ const ContactForm = () => {
                   />
                 </div>
 
-                <Button variant="hero" size="xl" type="submit" className="w-full">
-                  Quero condições especiais
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button variant="hero" size="xl" type="submit" className="flex-1">
+                    Falar com especialista
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                  <Button variant="heroOutline" size="xl" type="button" className="flex-1" asChild>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de receber a tabela do La Coruña." target="_blank" rel="noopener noreferrer">
+                      Receber tabela
+                    </a>
+                  </Button>
+                </div>
 
                 <p className="text-center text-sm text-muted-foreground">
                   Ou entre em contato diretamente pelo{" "}

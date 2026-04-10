@@ -34,10 +34,16 @@ const Location = () => {
               Localização Privilegiada
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-6">
-              Tudo perto de você,
+              No coração do Jardim Celeste,
               <br />
-              <span className="text-gradient">do jeito que deveria ser.</span>
+              <span className="text-gradient">São Bernardo do Campo.</span>
             </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Localizado na Rua Jorge Cândido Marin com Rua Japão, o La Coruña está em uma região estratégica, com fácil acesso a comércios, escolas, transporte e serviços.
+            </p>
+            <p className="text-base text-foreground font-medium mt-4 max-w-xl mx-auto">
+              Uma localização que facilita o seu dia a dia e valoriza seu investimento.
+            </p>
           </div>
 
           {/* Address card */}
