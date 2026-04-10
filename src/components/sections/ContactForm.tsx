@@ -98,7 +98,7 @@ const ContactForm = () => {
             <div className="absolute -top-px left-20 right-20 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
             
             <div className="relative z-10">
-              <div className="w-20 h-20 mx-auto mb-8">
+              <div className="w-28 h-28 mx-auto mb-8">
                 <img src={logoVertical} alt="La Coruña" className="w-full h-full object-contain" />
               </div>
 
