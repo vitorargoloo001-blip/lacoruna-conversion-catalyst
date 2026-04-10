@@ -37,7 +37,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo text */}
           <a href="#" className="flex items-center">
-            <img src={logoLaCoruna} alt="La Coruña - Edifício Residencial" className="h-20 sm:h-24 w-auto" />
+            <img src={logoLaCoruna} alt="La Coruña - Edifício Residencial" className="h-24 sm:h-28 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
