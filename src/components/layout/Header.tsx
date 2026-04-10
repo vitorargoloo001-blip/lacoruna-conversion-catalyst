@@ -9,7 +9,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > window.innerHeight * 0.8);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -27,10 +27,10 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border/50"
-          : "bg-transparent"
+          ? "bg-background/80 backdrop-blur-lg border-b border-border/50 opacity-100 translate-y-0"
+          : "opacity-0 -translate-y-full pointer-events-none"
       }`}
     >
       <div className="container px-6">
