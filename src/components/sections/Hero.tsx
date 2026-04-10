@@ -4,7 +4,7 @@ const fachada = "/fachada.png";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen lg:h-screen flex items-center overflow-hidden py-20 lg:py-0">
       {/* Soft blue radial gradient behind building */}
       <div className="absolute inset-0" style={{
         background: `
@@ -97,7 +97,7 @@ const Hero = () => {
               <img 
                 src={fachada} 
                 alt="Fachada do La Coruña - Edifício residencial moderno em São Bernardo do Campo"
-                className="w-auto max-h-[78vh] mx-auto object-contain"
+                className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none lg:w-auto max-h-[50vh] lg:max-h-[78vh] mx-auto object-contain"
                 style={{
                   filter: 'contrast(1.08) saturate(1.12) brightness(1.02)',
                 }}
