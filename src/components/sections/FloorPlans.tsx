@@ -1,4 +1,4 @@
-import { Home, Maximize, ArrowRight } from "lucide-react";
+import { Home, Maximize, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import plantaFinal0304 from "@/assets/planta-final-03-04.png";
@@ -10,7 +10,6 @@ const floorPlans = [
     title: "Finais 03 e 04",
     type: "2 dormitórios com varanda",
     areas: ["42,415 m²"],
-    highlight: "2 Dormitórios",
     image: plantaFinal0304,
   },
   {
@@ -18,54 +17,45 @@ const floorPlans = [
     title: "Finais 01 e 02",
     type: "2 dormitórios com varanda",
     areas: ["42,565 m²"],
-    highlight: "2 Dormitórios",
     featured: true,
     image: plantaFinal0102,
   },
 ];
 
-const features = [
-  "2 dormitórios",
-  "Sala integrada",
-  "Cozinha funcional",
-  "Banheiro bem distribuído",
+const seals = [
+  "2 Dormitórios",
   "Varanda",
+  "Vaga coberta",
 ];
 
 const FloorPlans = () => {
   return (
-    <section id="plantas" className="relative py-24 sm:py-32 overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      
+    <section id="plantas" className="relative py-20 sm:py-24 bg-[hsl(37_42%_94%)]">
       <div className="container px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-14">
             <span className="inline-block px-4 py-2 mb-6 text-sm font-medium border border-primary/30 rounded-full bg-primary/5 text-primary">
               Plantas e Tipologias
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">
-              Plantas inteligentes,
+            <h2 className="text-3xl sm:text-[42px] md:text-5xl font-bold font-heading leading-tight mb-4">
+              Espaço pensado para
               <br />
-              <span className="text-gradient">espaços bem distribuídos.</span>
+              <span className="text-gradient">caber sua vida.</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-              Com metragens de aproximadamente 42m², o La Coruña oferece dois tipos de planta com excelente aproveitamento interno.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+              Com aproximadamente 42m², o La Coruña oferece plantas inteligentes com excelente aproveitamento.
             </p>
 
-            {/* Features list */}
+            {/* Visual seals */}
             <div className="flex flex-wrap items-center justify-center gap-3">
-              {features.map((feature) => (
-                <span key={feature} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full border border-primary/20">
-                  {feature}
+              {seals.map((seal) => (
+                <span key={seal} className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary text-sm font-bold rounded-full border border-primary/20">
+                  <CheckCircle2 className="w-4 h-4" />
+                  {seal}
                 </span>
               ))}
             </div>
-
-            <p className="text-base text-muted-foreground mt-6 max-w-xl mx-auto">
-              Um projeto pensado para caber no seu orçamento e na sua vida.
-            </p>
           </div>
 
           {/* Floor plans grid */}
@@ -73,7 +63,7 @@ const FloorPlans = () => {
             {floorPlans.map((plan, index) => (
               <div
                 key={index}
-                className={`group relative p-6 rounded-2xl bg-card border transition-all duration-500 hover:shadow-card ${
+                className={`group relative p-6 rounded-2xl bg-card border shadow-card transition-all duration-500 hover:shadow-lg ${
                   plan.featured 
                     ? "border-primary/50 shadow-glow/30" 
                     : "border-border/50 hover:border-primary/40"
@@ -112,11 +102,6 @@ const FloorPlans = () => {
                     </span>
                   ))}
                 </div>
-
-                {/* Highlight tag */}
-                <span className="inline-block px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">
-                  {plan.highlight}
-                </span>
 
                 {/* Floor plan image */}
                 <div className="mt-4 rounded-lg bg-white aspect-square overflow-hidden">
