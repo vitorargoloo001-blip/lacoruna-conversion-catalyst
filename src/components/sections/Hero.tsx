@@ -23,43 +23,43 @@ const Hero = () => {
         }}
       />
 
-      <div className="container relative z-10 px-6 py-8">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+      <div className="container relative z-10 px-6 py-4 lg:py-8">
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left">
             {/* Logo */}
-            <div className="opacity-0 animate-fade-up mb-4">
+            <div className="opacity-0 animate-fade-up mb-2 lg:mb-4">
               <img src="/logo-lacoruna.png" alt="La Coruña Edifício Residencial" className="h-24 sm:h-28 w-auto mx-auto lg:mx-0" />
             </div>
 
             {/* Badge */}
             <div className="opacity-0 animate-fade-up">
-              <span className="inline-block px-4 py-1.5 mb-5 text-sm font-medium border border-primary/30 rounded-full bg-primary/5 text-primary">
+              <span className="inline-block px-4 py-1.5 mb-3 lg:mb-5 text-sm font-medium border border-primary/30 rounded-full bg-primary/5 text-primary">
                 Lançamento Jardim Celeste — São Bernardo do Campo
               </span>
             </div>
 
             {/* Main heading */}
-            <h1 className="opacity-0 animate-fade-up delay-100 font-heading tracking-wide mb-5" style={{ lineHeight: 1.05 }}>
+            <h1 className="opacity-0 animate-fade-up delay-100 font-heading tracking-wide mb-2 lg:mb-5" style={{ lineHeight: 1.05 }}>
               <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-1">Os 2 dormitórios mais</span>
               <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gradient-accent">COMPLETOS</span>
               <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl">de <span className="text-gradient-accent">São Bernardo.</span></span>
             </h1>
 
             {/* Subtitle */}
-            <p className="opacity-0 animate-fade-up delay-200 text-base sm:text-lg text-muted-foreground font-body max-w-2xl mx-auto lg:mx-0 mb-3" style={{ lineHeight: 1.5 }}>
+            <p className="opacity-0 animate-fade-up delay-200 text-sm sm:text-base lg:text-lg text-muted-foreground font-body max-w-2xl mx-auto lg:mx-0 mb-1.5 lg:mb-3" style={{ lineHeight: 1.4 }}>
               Torre única • Elevador • Varanda • Vaga coberta • Lazer completo.
               <br />
               <span className="text-foreground font-medium">Condições especiais pelo Minha Casa Minha Vida.</span>
             </p>
 
             {/* Strategic complement */}
-            <p className="opacity-0 animate-fade-up delay-200 text-sm text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-4 leading-relaxed">
+            <p className="opacity-0 animate-fade-up delay-200 text-xs sm:text-sm text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-2 lg:mb-4 leading-relaxed">
               A oportunidade de conquistar seu primeiro apartamento em uma das regiões que mais cresce em SBC.
             </p>
 
             {/* Highlight badges */}
-            <div className="opacity-0 animate-fade-up delay-200 flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-4">
+            <div className="opacity-0 animate-fade-up delay-200 flex flex-wrap items-center justify-center lg:justify-start gap-1.5 lg:gap-2 mb-2 lg:mb-4">
               {[
                 { icon: Building2, text: "Torre Única" },
                 { icon: Car, text: "Vaga Coberta" },
@@ -74,13 +74,13 @@ const Hero = () => {
             </div>
 
             {/* Location badge */}
-            <div className="opacity-0 animate-fade-up delay-200 flex items-center justify-center lg:justify-start gap-2 mb-6 text-muted-foreground">
+            <div className="opacity-0 animate-fade-up delay-200 flex items-center justify-center lg:justify-start gap-2 mb-3 lg:mb-6 text-muted-foreground">
               <MapPin className="w-4 h-4 text-primary" />
               <span className="text-xs">Rua Jorge Cândido Marin x Rua Japão — Jd. Celeste, São Bernardo do Campo - SP</span>
             </div>
 
             {/* CTA Buttons */}
-            <div className="opacity-0 animate-fade-up delay-300 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+            <div className="opacity-0 animate-fade-up delay-300 flex flex-col sm:flex-row gap-2 lg:gap-3 justify-center lg:justify-start">
               <Button variant="hero" size="lg" asChild>
                 <a href="#contato">
                   Quero condições especiais
