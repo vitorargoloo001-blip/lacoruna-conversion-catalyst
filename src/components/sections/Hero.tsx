@@ -4,7 +4,7 @@ const fachada = "/fachada.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen lg:h-screen flex items-center overflow-hidden py-20 lg:py-0">
+    <section className="relative min-h-screen lg:h-screen flex items-start pt-16 lg:items-center overflow-hidden lg:py-0">
       {/* Soft blue radial gradient behind building */}
       <div className="absolute inset-0" style={{
         background: `
