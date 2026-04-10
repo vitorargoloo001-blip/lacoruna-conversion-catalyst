@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MapPin, Building2, Car, Layers, Home, AlertTriangle } from "lucide-react";
 const fachada = "/fachada.png";
 
 const Hero = () => {
   return (
-    <section className="relative h-[92vh] flex items-center justify-center overflow-hidden" style={{ paddingTop: '120px', paddingBottom: '80px' }}>
+    <section className="relative h-[92vh] flex items-center justify-center overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-radial opacity-60" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
@@ -26,29 +26,51 @@ const Hero = () => {
             {/* Badge */}
             <div className="opacity-0 animate-fade-up">
               <span className="inline-block px-4 py-2 mb-6 text-sm font-medium border border-primary/30 rounded-full bg-primary/5 text-primary">
-                Lançamento no Jardim Celeste — SBC
+                Lançamento Jardim Celeste — São Bernardo do Campo
               </span>
             </div>
 
             {/* Main heading */}
-            <h1 className="opacity-0 animate-fade-up delay-100 text-[32px] sm:text-[44px] md:text-[58px] font-bold font-heading leading-[1.1] mb-6">
+            <h1 className="opacity-0 animate-fade-up delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-[60px] font-bold font-heading leading-[1.1] mb-6">
               Os 2 dormitórios mais{" "}
-              <span className="text-gradient">COMPLETOS</span>
+              <span className="text-gradient">COMPLETO</span>
               <br />
               de <span className="text-gradient">São Bernardo.</span>
             </h1>
 
-            {/* Subheadline */}
-            <p className="opacity-0 animate-fade-up delay-200 text-base sm:text-lg md:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0 mb-4 leading-relaxed">
-              Torre única com elevador, varanda e vaga coberta.
-              <br />
-              Lazer completo para sua família.
+            {/* Bullet points - emotional */}
+            <div className="opacity-0 animate-fade-up delay-200 space-y-2 mb-6 max-w-lg mx-auto lg:mx-0">
+              {[
+                "Torre única com elevador",
+                "Vaga coberta garantida",
+                "Lazer completo para sua família",
+                "Condições exclusivas de lançamento",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-2 text-base sm:text-lg text-foreground">
+                  <span className="text-primary font-bold">→</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Urgency trigger */}
+            <div className="opacity-0 animate-fade-up delay-200 mb-6">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/15 text-accent border border-accent/30 text-sm font-bold rounded-full">
+                <AlertTriangle className="w-4 h-4" />
+                Unidades limitadas
+              </span>
+            </div>
+
+            {/* Strategic complement */}
+            <p className="opacity-0 animate-fade-up delay-200 text-lg sm:text-xl text-foreground font-semibold max-w-2xl mx-auto lg:mx-0 mb-4">
+              💰 Saia do aluguel pagando parcelas a partir de R$ 600.
             </p>
 
-            {/* Strategic line */}
-            <p className="opacity-0 animate-fade-up delay-200 text-base sm:text-lg md:text-xl text-foreground font-semibold max-w-lg mx-auto lg:mx-0 mb-10">
-              A partir de R$ 360 mil pelo Minha Casa Minha Vida.
-            </p>
+            {/* Location badge */}
+            <div className="opacity-0 animate-fade-up delay-300 flex items-center justify-center lg:justify-start gap-2 mb-8 text-muted-foreground">
+              <MapPin className="w-4 h-4 text-primary" />
+              <span className="text-sm">Rua Jorge Cândido Marin x Rua Japão — Jd. Celeste, SBC</span>
+            </div>
 
             {/* CTA Buttons */}
             <div className="opacity-0 animate-fade-up delay-300 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -64,20 +86,21 @@ const Hero = () => {
                 </a>
               </Button>
             </div>
+
           </div>
 
           {/* Facade Image */}
           <div className="opacity-0 animate-fade-up delay-200 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)]">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src={fachada} 
                 alt="Fachada do La Coruña - Edifício residencial moderno em São Bernardo do Campo"
-                className="w-full h-auto object-cover contrast-[1.05] brightness-[1.02]"
+                className="w-full h-auto object-cover"
                 fetchPriority="high"
                 width={1024}
                 height={1408}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/15 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
             <div className="absolute -top-4 -left-4 w-20 h-20 bg-accent/20 rounded-full blur-2xl" />
