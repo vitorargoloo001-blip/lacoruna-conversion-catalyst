@@ -25,38 +25,39 @@ const Location = () => {
   }, []);
 
   return (
-    <section id="localizacao" className="relative py-24 sm:py-32">
+    <section id="localizacao" className="relative py-24 sm:py-32 bg-card">
       <div className="container px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 mb-6 text-sm font-medium border border-primary/30 rounded-full bg-primary/5 text-primary">
+            <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium tracking-[0.25em] uppercase border border-primary/40 bg-primary/5 text-primary rounded-sm">
               Localização Privilegiada
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-6">
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-primary mb-4" style={{ letterSpacing: '0.02em', lineHeight: 1.15 }}>
               No coração do Jardim Celeste,
               <br />
-              <span className="text-gradient">São Bernardo do Campo.</span>
+              <span className="text-accent italic font-medium">São Bernardo do Campo.</span>
             </h2>
+            <div className="w-16 h-px bg-accent/60 mx-auto mt-6 mb-6" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Localizado na Rua Jorge Cândido Marin com Rua Japão, o La Coruña está em uma região estratégica, com fácil acesso a comércios, escolas, transporte e serviços.
             </p>
-            <p className="text-base text-foreground font-medium mt-4 max-w-xl mx-auto">
+            <p className="text-base text-foreground font-medium font-heading italic mt-4 max-w-xl mx-auto">
               Uma localização que facilita o seu dia a dia e valoriza seu investimento.
             </p>
           </div>
 
           {/* Address card */}
-          <div className="bg-card rounded-2xl p-8 sm:p-12 shadow-card border border-border/50 mb-12">
+          <div className="bg-background border border-primary/20 rounded-sm p-8 sm:p-12 mb-12">
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-glow">
-                <MapPin className="w-8 h-8 text-primary-foreground" />
+              <div className="flex-shrink-0 w-14 h-14 border-2 border-accent flex items-center justify-center">
+                <MapPin className="w-7 h-7 text-accent" />
               </div>
               <div className="text-center md:text-left">
-                <h3 className="text-xl sm:text-2xl font-bold font-heading mb-2">
+                <h3 className="text-xl sm:text-2xl font-heading text-primary mb-2" style={{ letterSpacing: '0.02em' }}>
                   Rua Jorge Cândido Marin x Rua Japão
                 </h3>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   Jardim Celeste, São Bernardo do Campo - SP
                 </p>
               </div>
@@ -66,7 +67,7 @@ const Location = () => {
           {/* Google Maps embed - lazy loaded */}
           <div 
             ref={mapContainerRef}
-            className="mt-12 rounded-2xl bg-card border border-border/50 overflow-hidden aspect-video"
+            className="mt-12 rounded-sm border border-border overflow-hidden aspect-video"
           >
             {showMap ? (
               <iframe
