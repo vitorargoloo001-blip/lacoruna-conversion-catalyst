@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Building2, Car, Layers, Home } from "lucide-react";
-import logoHero from "@/assets/logo-hero.png";
+import LogoLaCoruna from "@/components/LogoLaCoruna";
 const fachada = "/fachada.png";
 
 const Hero = () => {
@@ -26,23 +26,8 @@ const Hero = () => {
           {/* Text Content */}
           <div className="text-center lg:text-left text-primary-foreground">
             {/* Logo */}
-            <div className="opacity-0 animate-fade-up -mb-2 lg:-mb-3 flex justify-center lg:justify-start">
-              <div
-                aria-label="La Coruña Edifício Residencial"
-                role="img"
-                className="h-44 sm:h-52 lg:h-64 w-44 sm:w-52 lg:w-64"
-                style={{
-                  backgroundColor: 'hsl(var(--primary-foreground))',
-                  WebkitMaskImage: `url(${logoHero})`,
-                  maskImage: `url(${logoHero})`,
-                  WebkitMaskRepeat: 'no-repeat',
-                  maskRepeat: 'no-repeat',
-                  WebkitMaskPosition: 'center',
-                  maskPosition: 'center',
-                  WebkitMaskSize: 'contain',
-                  maskSize: 'contain',
-                }}
-              />
+            <div className="opacity-0 animate-fade-up -mb-2 lg:-mb-4 flex justify-center lg:justify-start">
+              <LogoLaCoruna className="h-48 sm:h-56 lg:h-64 w-auto" />
             </div>
 
             {/* Badge */}
