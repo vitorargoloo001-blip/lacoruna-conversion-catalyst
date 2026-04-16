@@ -30,21 +30,20 @@ const differentials = [
 
 const Differentials = () => {
   return (
-    <section id="diferenciais" className="relative py-24 sm:py-32 bg-gradient-subtle">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-
+    <section id="diferenciais" className="relative py-24 sm:py-32 text-primary-foreground" style={{ background: 'var(--gradient-hero)' }}>
       <div className="container px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 mb-6 text-sm font-medium border border-primary/30 rounded-full bg-primary/5 text-primary">
+            <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium tracking-[0.25em] uppercase border border-accent/50 bg-accent/10 text-accent rounded-sm">
               Diferenciais
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading">
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl" style={{ letterSpacing: '0.02em', lineHeight: 1.15 }}>
               Mais completo do que
               <br />
-              <span className="text-gradient">você imagina.</span>
+              <span className="text-accent italic font-medium">você imagina.</span>
             </h2>
+            <div className="w-16 h-px bg-accent/60 mx-auto mt-6" />
           </div>
 
           {/* Differentials grid */}
@@ -52,19 +51,19 @@ const Differentials = () => {
             {differentials.map((item, index) => (
               <div
                 key={index}
-                className={`group p-6 sm:p-8 rounded-2xl bg-card border border-border/50 transition-all duration-300 hover:border-primary/40 hover:shadow-card ${
+                className={`group p-6 sm:p-8 bg-primary-foreground/[0.04] border border-primary-foreground/20 rounded-sm transition-all duration-300 hover:border-accent/60 hover:bg-primary-foreground/[0.07] ${
                   index === differentials.length - 1 && differentials.length % 3 === 2
                     ? "sm:col-span-2 lg:col-span-1"
                     : ""
                 }`}
               >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
-                  <item.icon className="w-7 h-7 text-primary" />
+                <div className="w-12 h-12 border border-accent/40 flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-accent/10">
+                  <item.icon className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="text-lg font-semibold font-body mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-semibold font-body mb-2 text-primary-foreground">
                   {item.title}
                 </h3>
-                <p className="text-sm text-muted-foreground font-body" style={{ lineHeight: 1.6 }}>
+                <p className="text-sm text-primary-foreground/70 font-body" style={{ lineHeight: 1.6 }}>
                   {item.description}
                 </p>
               </div>

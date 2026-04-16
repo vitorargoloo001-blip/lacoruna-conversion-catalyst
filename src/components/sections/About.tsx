@@ -1,20 +1,19 @@
-import { Building2 } from "lucide-react";
-
 const About = () => {
   return (
-    <section id="empreendimento" className="relative py-24 sm:py-32">
+    <section id="empreendimento" className="relative py-24 sm:py-32 bg-background">
       <div className="container px-6">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 mb-6 text-sm font-medium border border-primary/30 rounded-full bg-primary/5 text-primary">
+            <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium tracking-[0.25em] uppercase border border-primary/40 bg-primary/5 text-primary rounded-sm">
               O Empreendimento
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-6">
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-primary mb-4" style={{ letterSpacing: '0.02em', lineHeight: 1.15 }}>
               Conheça o
               <br />
-              <span className="text-gradient">La Coruña</span>
+              <span className="text-accent italic font-medium">La Coruña</span>
             </h2>
+            <div className="w-16 h-px bg-accent/60 mx-auto mt-6" />
           </div>
 
           {/* Text content */}
@@ -25,16 +24,9 @@ const About = () => {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               São 52 unidades em torre única com elevador, plantas otimizadas e acabamento pensado para o dia a dia da família brasileira.
             </p>
-            <p className="text-lg text-foreground font-medium leading-relaxed max-w-3xl mx-auto">
-              Aqui, cada detalhe foi planejado para transformar o sonho do primeiro apê em uma conquista real.
+            <p className="text-lg text-foreground font-medium leading-relaxed max-w-3xl mx-auto italic font-heading">
+              "Aqui, cada detalhe foi planejado para transformar o sonho do primeiro apê em uma conquista real."
             </p>
-          </div>
-
-          {/* Decorative icon */}
-          <div className="flex justify-center mt-12">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-              <Building2 className="w-8 h-8 text-primary" />
-            </div>
           </div>
         </div>
       </div>

@@ -8,7 +8,6 @@ import {
   Car,
   Building2,
   ArrowUpDown,
-  TreePine
 } from "lucide-react";
 import piscina from "@/assets/piscina.jpg";
 import churrasqueira from "@/assets/churrasqueira.jpg";
@@ -24,22 +23,20 @@ const amenities = [
 
 const Amenities = () => {
   return (
-    <section id="lazer" className="relative py-24 sm:py-32 bg-gradient-subtle">
-      {/* Decorative element */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-      
+    <section id="lazer" className="relative py-24 sm:py-32 bg-card">
       <div className="container px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 mb-6 text-sm font-medium border border-primary/30 rounded-full bg-primary/5 text-primary">
+            <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium tracking-[0.25em] uppercase border border-primary/40 bg-primary/5 text-primary rounded-sm">
               Lazer Completo
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-primary mb-4" style={{ letterSpacing: '0.02em', lineHeight: 1.15 }}>
               Lazer completo para
               <br />
-              <span className="text-gradient">todas as fases da vida.</span>
+              <span className="text-accent italic font-medium">todas as fases da vida.</span>
             </h2>
+            <div className="w-16 h-px bg-accent/60 mx-auto mt-6 mb-6" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               O La Coruña oferece uma estrutura pensada para reunir família e amigos sem sair de casa.
             </p>
@@ -50,29 +47,31 @@ const Amenities = () => {
             {amenities.map((amenity, index) => (
               <div
                 key={index}
-                className="group p-5 sm:p-6 rounded-xl bg-card border border-border/50 transition-all duration-300 hover:border-primary/40 hover:shadow-card text-center"
+                className="group p-5 sm:p-6 bg-secondary/40 border border-border rounded-sm transition-all duration-300 hover:border-accent/60 hover:bg-secondary/60 text-center"
               >
-                <div className="w-12 h-12 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-3 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
-                  <amenity.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 mx-auto border border-primary/30 flex items-center justify-center mb-3 transition-all duration-300 group-hover:border-accent group-hover:bg-accent/5">
+                  <amenity.icon className="w-6 h-6 text-primary group-hover:text-accent transition-colors" />
                 </div>
-                <h3 className="text-sm sm:text-base font-semibold font-body group-hover:text-primary transition-colors">
+                <h3 className="text-sm sm:text-base font-semibold font-body text-foreground">
                   {amenity.name}
                 </h3>
               </div>
             ))}
           </div>
 
-          {/* Highlight card */}
-          <div className="mt-12 p-8 sm:p-10 rounded-2xl bg-gradient-primary text-primary-foreground text-center">
-            <Building2 className="w-10 h-10 mx-auto mb-4 opacity-80" />
-            <p className="text-xl sm:text-2xl font-bold font-heading">
-              Um espaço onde sua rotina se transforma em qualidade de vida.
+          {/* Highlight quote */}
+          <div className="mt-16 mb-12 max-w-3xl mx-auto text-center">
+            <div className="w-12 h-px bg-accent/60 mx-auto mb-6" />
+            <Building2 className="w-8 h-8 mx-auto mb-4 text-accent" />
+            <p className="text-2xl sm:text-3xl font-heading italic text-primary" style={{ lineHeight: 1.3 }}>
+              "Um espaço onde sua rotina se transforma em qualidade de vida."
             </p>
+            <div className="w-12 h-px bg-accent/60 mx-auto mt-6" />
           </div>
 
           {/* Images */}
           <div className="mt-12 grid sm:grid-cols-2 gap-6">
-            <div className="rounded-2xl bg-card border border-border/50 aspect-video overflow-hidden">
+            <div className="rounded-sm border border-border aspect-video overflow-hidden">
               <img 
                 src={piscina} 
                 alt="Piscina do La Coruña - Área de lazer com piscina"
@@ -82,7 +81,7 @@ const Amenities = () => {
                 height={576}
               />
             </div>
-            <div className="rounded-2xl bg-card border border-border/50 aspect-video overflow-hidden">
+            <div className="rounded-sm border border-border aspect-video overflow-hidden">
               <img 
                 src={churrasqueira} 
                 alt="Churrasqueira do La Coruña - Espaço gourmet"
