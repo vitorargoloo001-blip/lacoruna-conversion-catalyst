@@ -67,7 +67,7 @@ const Location = () => {
           {/* Google Maps embed - lazy loaded */}
           <div 
             ref={mapContainerRef}
-            className="mt-12 rounded-sm border border-border overflow-hidden aspect-video"
+            className="mt-12 rounded-sm border border-border overflow-hidden w-full h-[300px] md:h-auto md:aspect-video"
           >
             {showMap ? (
               <iframe

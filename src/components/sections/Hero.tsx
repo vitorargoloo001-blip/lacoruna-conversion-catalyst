@@ -46,9 +46,9 @@ const Hero = () => {
 
             {/* Main heading */}
             <h1 className="opacity-0 animate-fade-up delay-100 font-heading mb-2 lg:mb-5 text-primary-foreground" style={{ lineHeight: 1.1, letterSpacing: '0.02em' }}>
-              <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 font-light italic opacity-90">Os 2 dormitórios mais</span>
-              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-accent font-semibold">COMPLETOS</span>
-              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl">de <span className="text-accent">São Bernardo.</span></span>
+              <span className="block text-lg sm:text-2xl md:text-3xl lg:text-4xl mb-1 font-light italic opacity-90">Os 2 dormitórios mais</span>
+              <span className="block text-[34px] sm:text-5xl md:text-6xl lg:text-7xl text-accent font-semibold leading-none">COMPLETOS</span>
+              <span className="block text-2xl sm:text-4xl md:text-5xl lg:text-6xl">de <span className="text-accent">São Bernardo.</span></span>
             </h1>
 
             {/* Divisor fino */}
@@ -88,14 +88,14 @@ const Hero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="opacity-0 animate-fade-up delay-300 flex flex-col sm:flex-row gap-2 lg:gap-3 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" asChild>
+            <div className="opacity-0 animate-fade-up delay-300 flex flex-col sm:flex-row gap-3 lg:gap-3 justify-center lg:justify-start">
+              <Button variant="hero" size="lg" asChild className="w-full sm:w-auto min-h-[48px]">
                 <a href="#contato">
                   Quero condições especiais
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button size="lg" asChild className="border-2 border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button size="lg" asChild className="w-full sm:w-auto min-h-[48px] border-2 border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                 <a href="#plantas">
                   Ver plantas
                 </a>
