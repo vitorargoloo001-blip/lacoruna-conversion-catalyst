@@ -9,25 +9,8 @@ const conditions = [
 
 const Conditions = () => {
   return (
-    <section id="condicoes" className="relative py-24 sm:py-32 text-primary-foreground overflow-hidden" style={{ background: 'linear-gradient(160deg, hsl(217 35% 14%) 0%, hsl(217 32% 18%) 45%, hsl(217 30% 22%) 100%)' }}>
-      {/* Subtle grid overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.06] pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(hsl(30 40% 90%) 1px, transparent 1px), linear-gradient(90deg, hsl(30 40% 90%) 1px, transparent 1px)",
-          backgroundSize: "90px 90px",
-        }}
-      />
-      {/* Soft radial glow */}
-      <div
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[90%] pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, hsl(30 65% 70% / 0.12) 0%, transparent 65%)",
-        }}
-      />
-      <div className="container relative z-10 px-6">
+    <section id="condicoes" className="relative py-24 sm:py-32 text-primary-foreground" style={{ background: 'var(--gradient-hero)' }}>
+      <div className="container px-6">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-12">
