@@ -26,23 +26,8 @@ const Hero = () => {
           {/* Text Content */}
           <div className="text-center lg:text-left text-primary-foreground">
             {/* Logo */}
-            <div className="opacity-0 animate-fade-up -mb-2 lg:-mb-3 flex justify-center lg:justify-start">
-              <div
-                aria-label="La Coruña Edifício Residencial"
-                role="img"
-                className="h-44 sm:h-52 lg:h-64 w-44 sm:w-52 lg:w-64"
-                style={{
-                  backgroundColor: 'hsl(var(--primary-foreground))',
-                  WebkitMaskImage: `url(${logoHero})`,
-                  maskImage: `url(${logoHero})`,
-                  WebkitMaskRepeat: 'no-repeat',
-                  maskRepeat: 'no-repeat',
-                  WebkitMaskPosition: 'center',
-                  maskPosition: 'center',
-                  WebkitMaskSize: 'contain',
-                  maskSize: 'contain',
-                }}
-              />
+            <div className="opacity-0 animate-fade-up -mb-1 lg:-mb-1">
+              <img src={logoHero} alt="La Coruña Edifício Residencial" className="h-36 sm:h-40 lg:h-48 w-auto mx-auto lg:mx-0" />
             </div>
 
             {/* Badge */}
