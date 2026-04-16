@@ -100,8 +100,8 @@ const Hero = () => {
           {/* Facade Image */}
           <div className="opacity-0 animate-fade-up delay-200 relative">
             <div className="relative">
-              <img 
-                src={fachada} 
+              <img
+                src={fachada}
                 alt="Fachada do La Coruña - Edifício residencial moderno em São Bernardo do Campo"
                 className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none lg:w-auto max-h-[50vh] lg:max-h-[78vh] mx-auto object-contain"
                 style={{
@@ -111,18 +111,10 @@ const Hero = () => {
                 width={1024}
                 height={1408}
               />
-              {/* Sutil sombra ao redor da fachada sobre fundo navy */}
-              <div className="absolute inset-0 pointer-events-none" style={{
-                background: 'radial-gradient(ellipse at center, transparent 55%, hsl(217 28% 15% / 0.35) 100%)',
-              }} />
-              {/* Sombra arquitetônica no chão */}
-              <div className="absolute bottom-0 left-[10%] right-[10%] h-8 pointer-events-none" style={{
-                background: 'radial-gradient(ellipse at center, hsl(217 30% 8% / 0.4) 0%, transparent 70%)',
-                filter: 'blur(8px)',
-              }} />
-              {/* Glow laranja sutil */}
-              <div className="absolute bottom-[10%] left-[20%] right-[20%] h-[20%] pointer-events-none" style={{
-                background: 'radial-gradient(ellipse at center bottom, hsl(17 76% 56% / 0.12) 0%, transparent 70%)',
+              {/* Sombra realista sutil apenas na base */}
+              <div className="absolute bottom-0 left-[15%] right-[15%] h-6 pointer-events-none" style={{
+                background: 'radial-gradient(ellipse at center, hsl(217 30% 5% / 0.35) 0%, transparent 75%)',
+                filter: 'blur(10px)',
               }} />
             </div>
           </div>
