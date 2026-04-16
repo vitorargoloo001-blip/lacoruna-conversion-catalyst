@@ -29,7 +29,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border/50 opacity-100 translate-y-0"
+          ? "bg-primary/95 backdrop-blur-lg border-b border-primary-foreground/10 opacity-100 translate-y-0"
           : "opacity-0 -translate-y-full pointer-events-none"
       }`}
     >
@@ -46,7 +46,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-xs font-medium tracking-wider uppercase text-primary-foreground/70 hover:text-accent transition-colors"
               >
                 {link.label}
               </a>
@@ -58,7 +58,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-primary-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >

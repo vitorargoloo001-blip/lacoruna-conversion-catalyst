@@ -58,22 +58,23 @@ const ContactForm = () => {
 
   if (isSubmitted) {
     return (
-      <section id="contato" className="relative py-24 sm:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-radial opacity-50" />
+      <section id="contato" className="relative py-24 sm:py-32 overflow-hidden bg-card">
         <div className="container px-6 relative z-10">
           <div className="max-w-xl mx-auto">
-            <div className="p-8 sm:p-12 rounded-3xl bg-card border border-border/50 shadow-card text-center">
-              <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-primary flex items-center justify-center mb-6 shadow-glow">
-                <CheckCircle className="w-10 h-10 text-primary-foreground" />
+            <div className="p-10 sm:p-12 bg-background border border-primary/20 rounded-sm text-center">
+              <div className="w-16 h-16 mx-auto border-2 border-accent flex items-center justify-center mb-6">
+                <CheckCircle className="w-8 h-8 text-accent" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold font-heading mb-4">
+              <h2 className="font-heading text-3xl sm:text-4xl text-primary mb-4" style={{ letterSpacing: '0.02em' }}>
                 Mensagem enviada!
               </h2>
+              <div className="w-12 h-px bg-accent/60 mx-auto mb-6" />
               <p className="text-muted-foreground mb-6">
                 Em breve nossa equipe entrará em contato. Você será redirecionado para o WhatsApp.
               </p>
               <Button
-                variant="heroOutline"
+                size="lg"
+                className="border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground"
                 onClick={() => setIsSubmitted(false)}
               >
                 Enviar outra mensagem
@@ -86,28 +87,22 @@ const ContactForm = () => {
   }
 
   return (
-    <section id="contato" className="relative py-24 sm:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-radial opacity-50" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-      
+    <section id="contato" className="relative py-24 sm:py-32 overflow-hidden bg-card">
       <div className="container px-6 relative z-10">
         <div className="max-w-3xl mx-auto">
-          <div className="p-8 sm:p-12 lg:p-16 rounded-3xl bg-card border border-border/50 shadow-card relative overflow-hidden">
-            <div className="absolute inset-0 rounded-3xl border border-primary/20" />
-            <div className="absolute -top-px left-20 right-20 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
-            
+          <div className="p-8 sm:p-12 lg:p-16 bg-background border border-primary/20 rounded-sm relative overflow-hidden">
             <div className="relative z-10">
-              <div className="w-28 h-28 mx-auto mb-8">
+              <div className="w-24 h-24 mx-auto mb-8">
                 <img src={logoVertical} alt="La Coruña" className="w-full h-full object-contain" />
               </div>
 
               <div className="text-center mb-10">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">
+                <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-primary mb-4" style={{ letterSpacing: '0.02em', lineHeight: 1.15 }}>
                   Seu novo capítulo
                   <br />
-                  <span className="text-gradient">começa aqui.</span>
+                  <span className="text-accent italic font-medium">começa aqui.</span>
                 </h2>
+                <div className="w-16 h-px bg-accent/60 mx-auto mt-6 mb-6" />
                 <p className="text-lg text-muted-foreground max-w-xl mx-auto">
                   Converse com um especialista e descubra como conquistar seu apartamento no La Coruña com condições exclusivas de lançamento.
                 </p>
@@ -205,7 +200,7 @@ const ContactForm = () => {
                     Falar com especialista
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button variant="heroOutline" size="xl" type="button" className="flex-1" asChild>
+                  <Button size="xl" type="button" className="flex-1 border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground" asChild>
                     <a href="https://wa.me/5511999999999?text=Olá! Gostaria de receber a tabela do La Coruña." target="_blank" rel="noopener noreferrer">
                       Receber tabela
                     </a>
@@ -218,7 +213,7 @@ const ContactForm = () => {
                     href="https://wa.me/5511999999999"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary underline hover:text-accent"
+                    className="text-accent underline hover:text-primary"
                   >
                     WhatsApp
                   </a>
