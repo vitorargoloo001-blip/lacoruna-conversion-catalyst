@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Building2, Car, Layers, Home } from "lucide-react";
+import logoHero from "@/assets/logo-hero.png";
 const fachada = "/fachada.png";
 
 const Hero = () => {
@@ -26,7 +27,7 @@ const Hero = () => {
           <div className="text-center lg:text-left text-primary-foreground">
             {/* Logo */}
             <div className="opacity-0 animate-fade-up -mb-1 lg:-mb-1">
-              <img src="/logo-lacoruna.png" alt="La Coruña Edifício Residencial" className="h-36 sm:h-40 lg:h-48 w-auto mx-auto lg:mx-0" />
+              <img src={logoHero} alt="La Coruña Edifício Residencial" className="h-36 sm:h-40 lg:h-48 w-auto mx-auto lg:mx-0" />
             </div>
 
             {/* Badge */}
