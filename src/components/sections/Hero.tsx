@@ -10,14 +10,21 @@ const Hero = () => {
       <div className="absolute inset-0" style={{
         background: `var(--gradient-hero)`
       }} />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-glow" />
+
+      {/* Iluminação radial suave atrás da imagem do prédio (lado direito) */}
+      <div
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-[70%] h-[90%] pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse at 60% 50%, hsl(30 60% 70% / 0.18) 0%, hsl(217 30% 35% / 0.08) 35%, transparent 70%)',
+        }}
+      />
 
       {/* Grid pattern overlay sutil */}
       <div
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage: `linear-gradient(hsl(30 30% 90%) 1px, transparent 1px), linear-gradient(90deg, hsl(30 30% 90%) 1px, transparent 1px)`,
-          backgroundSize: '80px 80px'
+          backgroundSize: '90px 90px'
         }}
       />
 
