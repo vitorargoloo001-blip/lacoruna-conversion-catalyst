@@ -5,28 +5,25 @@ const fachada = "/fachada.png";
 const Hero = () => {
   return (
     <section className="relative min-h-screen lg:h-screen flex items-start pt-6 lg:items-center overflow-hidden lg:py-0">
-      {/* Soft blue radial gradient behind building */}
+      {/* Navy profundo institucional */}
       <div className="absolute inset-0" style={{
-        background: `
-          radial-gradient(ellipse 70% 70% at 65% 50%, #DCE8FF 0%, transparent 70%),
-          linear-gradient(180deg, hsl(var(--background)) 0%, #EDF2FC 40%, #E9F1FF 60%, hsl(var(--background)) 100%)
-        `
+        background: `var(--gradient-hero)`
       }} />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/8 rounded-full blur-3xl animate-pulse-glow" />
-      
-      {/* Grid pattern overlay */}
-      <div 
-        className="absolute inset-0 opacity-[0.03]"
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-glow" />
+
+      {/* Grid pattern overlay sutil */}
+      <div
+        className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
+          backgroundImage: `linear-gradient(hsl(30 30% 90%) 1px, transparent 1px), linear-gradient(90deg, hsl(30 30% 90%) 1px, transparent 1px)`,
+          backgroundSize: '80px 80px'
         }}
       />
 
       <div className="container relative z-10 px-6 py-4 lg:py-8">
         <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
           {/* Text Content */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left text-primary-foreground">
             {/* Logo */}
             <div className="opacity-0 animate-fade-up -mb-1 lg:-mb-1">
               <img src="/logo-lacoruna.png" alt="La Coruña Edifício Residencial" className="h-36 sm:h-40 lg:h-48 w-auto mx-auto lg:mx-0" />
@@ -34,27 +31,30 @@ const Hero = () => {
 
             {/* Badge */}
             <div className="opacity-0 animate-fade-up">
-              <span className="inline-block px-4 py-1.5 mb-3 lg:mb-5 text-sm font-medium border border-primary/30 rounded-full bg-primary/5 text-primary">
+              <span className="inline-block px-4 py-1.5 mb-3 lg:mb-5 text-xs font-medium tracking-widest uppercase border border-accent/50 rounded-sm bg-accent/10 text-accent">
                 Lançamento Jardim Celeste — São Bernardo do Campo
               </span>
             </div>
 
             {/* Main heading */}
-            <h1 className="opacity-0 animate-fade-up delay-100 font-heading tracking-wide mb-2 lg:mb-5" style={{ lineHeight: 1.05 }}>
-              <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-1">Os 2 dormitórios mais</span>
-              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gradient-accent">COMPLETOS</span>
-              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl">de <span className="text-gradient-accent">São Bernardo.</span></span>
+            <h1 className="opacity-0 animate-fade-up delay-100 font-heading mb-2 lg:mb-5 text-primary-foreground" style={{ lineHeight: 1.1, letterSpacing: '0.02em' }}>
+              <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 font-light italic opacity-90">Os 2 dormitórios mais</span>
+              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-accent font-semibold">COMPLETOS</span>
+              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl">de <span className="text-accent">São Bernardo.</span></span>
             </h1>
 
+            {/* Divisor fino */}
+            <div className="opacity-0 animate-fade-up delay-100 hidden lg:block w-24 h-px bg-accent/60 mb-4" />
+
             {/* Subtitle */}
-            <p className="opacity-0 animate-fade-up delay-200 text-sm sm:text-base lg:text-lg text-muted-foreground font-body max-w-2xl mx-auto lg:mx-0 mb-1.5 lg:mb-3" style={{ lineHeight: 1.4 }}>
+            <p className="opacity-0 animate-fade-up delay-200 text-sm sm:text-base lg:text-lg text-primary-foreground/80 font-body max-w-2xl mx-auto lg:mx-0 mb-1.5 lg:mb-3" style={{ lineHeight: 1.5 }}>
               Torre única • Elevador • Varanda • Vaga coberta • Lazer completo.
               <br />
-              <span className="text-foreground font-medium">Condições especiais pelo Minha Casa Minha Vida.</span>
+              <span className="text-primary-foreground font-medium">Condições especiais pelo Minha Casa Minha Vida.</span>
             </p>
 
             {/* Strategic complement */}
-            <p className="opacity-0 animate-fade-up delay-200 text-xs sm:text-sm text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-2 lg:mb-4 leading-relaxed">
+            <p className="opacity-0 animate-fade-up delay-200 text-xs sm:text-sm text-primary-foreground/70 max-w-2xl mx-auto lg:mx-0 mb-2 lg:mb-4 leading-relaxed">
               A oportunidade de conquistar seu primeiro apartamento em uma das regiões que mais cresce em SBC.
             </p>
 
@@ -66,16 +66,16 @@ const Hero = () => {
                 { icon: Layers, text: "Lazer Completo" },
                 { icon: Home, text: "Minha Casa Minha Vida" },
               ].map((item) => (
-                <span key={item.text} className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full border border-primary/20">
-                  <item.icon className="w-3 h-3" />
+                <span key={item.text} className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary-foreground/5 text-primary-foreground/90 text-xs font-medium rounded-sm border border-primary-foreground/20">
+                  <item.icon className="w-3 h-3 text-accent" />
                   {item.text}
                 </span>
               ))}
             </div>
 
             {/* Location badge */}
-            <div className="opacity-0 animate-fade-up delay-200 flex items-center justify-center lg:justify-start gap-2 mb-3 lg:mb-6 text-muted-foreground">
-              <MapPin className="w-4 h-4 text-primary" />
+            <div className="opacity-0 animate-fade-up delay-200 flex items-center justify-center lg:justify-start gap-2 mb-3 lg:mb-6 text-primary-foreground/70">
+              <MapPin className="w-4 h-4 text-accent" />
               <span className="text-xs">Rua Jorge Cândido Marin x Rua Japão — Jd. Celeste, São Bernardo do Campo - SP</span>
             </div>
 
@@ -87,7 +87,7 @@ const Hero = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button variant="heroOutline" size="lg" asChild>
+              <Button size="lg" asChild className="border-2 border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                 <a href="#plantas">
                   Ver plantas
                 </a>
@@ -110,26 +110,18 @@ const Hero = () => {
                 width={1024}
                 height={1408}
               />
-              {/* Subtle edge blend - not white, matches blue gradient bg */}
+              {/* Sutil sombra ao redor da fachada sobre fundo navy */}
               <div className="absolute inset-0 pointer-events-none" style={{
-                background: `
-                  linear-gradient(to right, #E9F1FF 0%, transparent 8%),
-                  linear-gradient(to left, #E9F1FF 0%, transparent 8%),
-                  linear-gradient(to bottom, transparent 0%, transparent 85%, #E9F1FFcc 100%)
-                `
+                background: 'radial-gradient(ellipse at center, transparent 55%, hsl(217 28% 15% / 0.35) 100%)',
               }} />
-              {/* Architectural ground shadow */}
+              {/* Sombra arquitetônica no chão */}
               <div className="absolute bottom-0 left-[10%] right-[10%] h-8 pointer-events-none" style={{
-                background: 'radial-gradient(ellipse at center, hsl(221 40% 30% / 0.15) 0%, transparent 70%)',
-                filter: 'blur(6px)',
+                background: 'radial-gradient(ellipse at center, hsl(217 30% 8% / 0.4) 0%, transparent 70%)',
+                filter: 'blur(8px)',
               }} />
-              {/* Warm glow on lower portion */}
-              <div className="absolute bottom-[5%] left-[20%] right-[20%] h-[20%] pointer-events-none" style={{
-                background: 'radial-gradient(ellipse at center bottom, hsl(30 60% 70% / 0.08) 0%, transparent 70%)',
-              }} />
-              {/* Subtle vignette */}
-              <div className="absolute inset-0 pointer-events-none" style={{
-                background: 'radial-gradient(ellipse at center, transparent 50%, hsl(221 40% 48% / 0.04) 100%)',
+              {/* Glow laranja sutil */}
+              <div className="absolute bottom-[10%] left-[20%] right-[20%] h-[20%] pointer-events-none" style={{
+                background: 'radial-gradient(ellipse at center bottom, hsl(17 76% 56% / 0.12) 0%, transparent 70%)',
               }} />
             </div>
           </div>
@@ -137,8 +129,8 @@ const Hero = () => {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in delay-500">
-          <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center p-2">
-            <div className="w-1 h-2 bg-primary rounded-full animate-bounce" />
+          <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex justify-center p-2">
+            <div className="w-1 h-2 bg-accent rounded-full animate-bounce" />
           </div>
         </div>
       </div>
