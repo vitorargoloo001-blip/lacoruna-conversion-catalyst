@@ -67,7 +67,7 @@ const FloorPlans = () => {
           </div>
 
           {/* Floor plans grid */}
-          <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {floorPlans.map((plan, index) => (
               <div
                 key={index}
