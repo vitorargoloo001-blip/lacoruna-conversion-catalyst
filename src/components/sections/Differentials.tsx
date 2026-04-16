@@ -1,4 +1,5 @@
 import { Building2, ArrowUpDown, Car, Sunrise, Waves } from "lucide-react";
+import differentialsBg from "@/assets/differentials-bg.jpg";
 
 const differentials = [
   {
@@ -30,8 +31,14 @@ const differentials = [
 
 const Differentials = () => {
   return (
-    <section id="diferenciais" className="relative py-24 sm:py-32 text-primary-foreground" style={{ background: 'var(--gradient-hero)' }}>
-      <div className="container px-6">
+    <section
+      id="diferenciais"
+      className="relative py-24 sm:py-32 text-primary-foreground bg-cover bg-center"
+      style={{ backgroundImage: `url(${differentialsBg})` }}
+    >
+      {/* Navy overlay 90% */}
+      <div className="absolute inset-0 bg-primary/90" aria-hidden="true" />
+      <div className="container px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
