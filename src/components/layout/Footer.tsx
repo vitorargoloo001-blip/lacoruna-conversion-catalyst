@@ -1,12 +1,19 @@
 import { Phone } from "lucide-react";
 import logoLaCoruna from "@/assets/logo-lacoruna.png";
+import logoSymbol from "@/assets/logo-symbol.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative py-12 sm:py-16 text-primary-foreground" style={{ background: 'var(--gradient-hero)' }}>
-      <div className="container px-6">
+    <footer className="relative py-12 sm:py-16 text-primary-foreground overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
+      <img
+        src={logoSymbol}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute -right-16 -bottom-16 w-[420px] opacity-[0.06]"
+      />
+      <div className="container px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Main footer content */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
