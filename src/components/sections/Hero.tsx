@@ -61,11 +61,6 @@ const Hero = () => {
               <span className="text-primary-foreground font-medium">Condições especiais pelo Minha Casa Minha Vida.</span>
             </p>
 
-            {/* Strategic complement */}
-            <p className="opacity-0 animate-fade-up delay-200 text-xs sm:text-sm text-primary-foreground/70 max-w-2xl mx-auto lg:mx-0 mb-2 lg:mb-4 leading-relaxed">
-              A oportunidade de conquistar seu primeiro apartamento em uma das regiões que mais cresce em SBC.
-            </p>
-
             {/* Highlight badges */}
             <div className="opacity-0 animate-fade-up delay-200 flex flex-wrap items-center justify-center lg:justify-start gap-1.5 lg:gap-2 mb-2 lg:mb-4">
               {[
@@ -74,7 +69,7 @@ const Hero = () => {
                 { icon: Layers, text: "Lazer Completo" },
                 { icon: Home, text: "Minha Casa Minha Vida" },
               ].map((item) => (
-                <span key={item.text} className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary-foreground/5 text-primary-foreground/90 text-xs font-medium rounded-sm border border-primary-foreground/20">
+                <span key={item.text} className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-transparent text-primary-foreground/90 text-xs font-medium rounded-sm border border-primary-foreground/25">
                   <item.icon className="w-3 h-3 text-accent" />
                   {item.text}
                 </span>
@@ -95,7 +90,7 @@ const Hero = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button size="lg" asChild className="border-2 border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button size="lg" asChild className="border-2 border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                 <a href="#plantas">
                   Ver plantas
                 </a>
