@@ -5,21 +5,18 @@ const fachada = "/fachada.png";
 const Hero = () => {
   return (
     <section className="relative min-h-screen lg:h-screen flex items-start pt-6 lg:items-center overflow-hidden lg:py-0">
-      {/* Soft blue radial gradient behind building */}
+      {/* Navy profundo institucional */}
       <div className="absolute inset-0" style={{
-        background: `
-          radial-gradient(ellipse 70% 70% at 65% 50%, #DCE8FF 0%, transparent 70%),
-          linear-gradient(180deg, hsl(var(--background)) 0%, #EDF2FC 40%, #E9F1FF 60%, hsl(var(--background)) 100%)
-        `
+        background: `var(--gradient-hero)`
       }} />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/8 rounded-full blur-3xl animate-pulse-glow" />
-      
-      {/* Grid pattern overlay */}
-      <div 
-        className="absolute inset-0 opacity-[0.03]"
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-glow" />
+
+      {/* Grid pattern overlay sutil */}
+      <div
+        className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
+          backgroundImage: `linear-gradient(hsl(30 30% 90%) 1px, transparent 1px), linear-gradient(90deg, hsl(30 30% 90%) 1px, transparent 1px)`,
+          backgroundSize: '80px 80px'
         }}
       />
 

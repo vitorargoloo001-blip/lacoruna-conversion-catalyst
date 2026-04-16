@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['DM Serif Display', 'serif'],
+        heading: ['Cormorant Garamond', 'serif'],
         body: ['Plus Jakarta Sans', 'sans-serif'],
       },
       colors: {
