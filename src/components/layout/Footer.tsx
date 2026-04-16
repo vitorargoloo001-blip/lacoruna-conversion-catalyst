@@ -1,5 +1,5 @@
 import { Phone } from "lucide-react";
-import logoLaCoruna from "@/assets/logo-lacoruna.png";
+import logoLaCoruna from "@/assets/logo-footer.png";
 import logoSymbol from "@/assets/logo-symbol.png";
 
 const Footer = () => {
