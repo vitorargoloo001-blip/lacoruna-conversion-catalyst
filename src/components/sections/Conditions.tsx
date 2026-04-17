@@ -9,7 +9,7 @@ const conditions = [
 
 const Conditions = () => {
   return (
-    <section id="condicoes" className="relative py-24 sm:py-32 text-primary-foreground" style={{ background: 'var(--gradient-hero)' }}>
+    <section id="condicoes" className="relative py-14 sm:py-24 lg:py-32 text-primary-foreground" style={{ background: 'var(--gradient-hero)' }}>
       <div className="container px-6">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}

@@ -25,7 +25,7 @@ const Location = () => {
   }, []);
 
   return (
-    <section id="localizacao" className="relative py-24 sm:py-32 bg-card">
+    <section id="localizacao" className="relative py-14 sm:py-24 lg:py-32 bg-card">
       <div className="container px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section header */}
