@@ -14,7 +14,7 @@ const technicalData = [
 
 const TechnicalSheet = () => {
   return (
-    <section id="ficha-tecnica" className="relative py-14 sm:py-24 lg:py-32 bg-background">
+    <section id="ficha-tecnica" className="section-light relative py-14 sm:py-24 lg:py-32 bg-background">
       <div className="container px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section header */}

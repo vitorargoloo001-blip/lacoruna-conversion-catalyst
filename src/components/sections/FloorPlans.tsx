@@ -34,7 +34,7 @@ const features = [
 
 const FloorPlans = () => {
   return (
-    <section id="plantas" className="relative py-14 sm:py-24 lg:py-32 bg-background overflow-hidden">
+    <section id="plantas" className="section-light relative py-14 sm:py-24 lg:py-32 bg-background overflow-hidden">
       <div className="container px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}

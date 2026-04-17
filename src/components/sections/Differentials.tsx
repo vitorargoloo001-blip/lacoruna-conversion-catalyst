@@ -33,7 +33,7 @@ const Differentials = () => {
   return (
     <section
       id="diferenciais"
-      className="relative py-14 sm:py-24 lg:py-32 text-primary-foreground bg-cover bg-center"
+      className="section-dark relative py-14 sm:py-24 lg:py-32 text-primary-foreground bg-cover bg-center"
       style={{ backgroundImage: `url(${differentialsBg})` }}
     >
       {/* Navy overlay 90% */}
