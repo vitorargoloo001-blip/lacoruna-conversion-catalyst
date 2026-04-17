@@ -89,13 +89,13 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="opacity-0 animate-fade-up delay-300 flex flex-col sm:flex-row gap-3.5 lg:gap-3 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" asChild className="w-full sm:w-auto h-[52px] lg:h-11 text-[15px] lg:text-sm">
+              <Button variant="hero" size="lg" asChild className="w-full sm:w-auto h-[52px] lg:h-11 text-[13px] lg:text-sm px-4 lg:px-8 whitespace-normal lg:whitespace-nowrap">
                 <a href="#contato">
-                  Quero condições especiais
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <span className="text-center leading-tight">Quero condições especiais</span>
+                  <ArrowRight className="ml-1.5 h-4 w-4 shrink-0" />
                 </a>
               </Button>
-              <Button size="lg" asChild className="w-full sm:w-auto h-[52px] lg:h-11 text-[15px] lg:text-sm border border-primary-foreground/50 lg:border-2 lg:border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button size="lg" asChild className="w-full sm:w-auto h-[52px] lg:h-11 text-[13px] lg:text-sm px-4 lg:px-8 border border-primary-foreground/50 lg:border-2 lg:border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                 <a href="#plantas">
                   Ver plantas
                 </a>
