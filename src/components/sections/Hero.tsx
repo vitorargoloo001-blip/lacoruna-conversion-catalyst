@@ -32,7 +32,7 @@ const Hero = () => {
         }}
       />
 
-      <div className="container relative z-10 w-full max-w-full px-5 lg:px-6 py-4 lg:py-8">
+      <div className="container relative z-10 w-full max-w-full px-5 lg:px-6 py-4 lg:py-2">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center w-full max-w-full">
           <div className="w-full min-w-0 text-center lg:text-left text-primary-foreground">
             <div className="opacity-0 animate-fade-up mb-5 lg:-mb-1">
