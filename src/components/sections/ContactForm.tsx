@@ -58,7 +58,7 @@ const ContactForm = () => {
 
   if (isSubmitted) {
     return (
-      <section id="contato" className="relative py-24 sm:py-32 overflow-hidden bg-card">
+      <section id="contato" className="relative py-14 sm:py-24 lg:py-32 overflow-hidden bg-card">
         <div className="container px-6 relative z-10">
           <div className="max-w-xl mx-auto">
             <div className="p-10 sm:p-12 bg-background border border-primary/20 rounded-sm text-center">
@@ -87,7 +87,7 @@ const ContactForm = () => {
   }
 
   return (
-    <section id="contato" className="relative py-24 sm:py-32 overflow-hidden bg-card">
+    <section id="contato" className="relative py-14 sm:py-24 lg:py-32 overflow-hidden bg-card">
       <div className="container px-6 relative z-10">
         <div className="max-w-3xl mx-auto">
           <div className="p-8 sm:p-12 lg:p-16 bg-background border border-primary/20 rounded-sm relative overflow-hidden">
