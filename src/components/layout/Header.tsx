@@ -15,6 +15,15 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+    return () => document.body.classList.remove("menu-open");
+  }, [isMobileMenuOpen]);
+
   const navLinks = [
     { href: "#empreendimento", label: "O Empreendimento" },
     { href: "#diferenciais", label: "Diferenciais" },
@@ -68,33 +77,44 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden fixed inset-0 top-16 sm:top-20 z-40 transition-all duration-300 ease-out ${
-            isMobileMenuOpen 
-              ? "opacity-100 visible" 
+          className={`md:hidden fixed inset-0 transition-opacity duration-300 ease-out ${
+            isMobileMenuOpen
+              ? "opacity-100 visible"
               : "opacity-0 invisible pointer-events-none"
           }`}
+          style={{ zIndex: 9998 }}
         >
-          <div 
-            className="absolute inset-0 bg-foreground/20"
+          <div
+            className="absolute inset-0 bg-black/40"
             onClick={() => setIsMobileMenuOpen(false)}
           />
-          <nav 
-            className={`absolute right-0 top-0 h-full w-3/4 max-w-xs bg-white border-l border-border/50 shadow-xl py-8 px-6 transition-transform duration-300 ease-out ${
+          <nav
+            className={`absolute top-0 right-0 h-screen w-full bg-primary shadow-2xl py-8 px-6 transition-transform duration-300 ease-out overflow-y-auto ${
               isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
             }`}
+            style={{ zIndex: 9999, backgroundColor: "hsl(217 24% 25%)" }}
           >
+            <div className="flex justify-end mb-8">
+              <button
+                className="p-2 text-primary-foreground"
+                onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
             <div className="flex flex-col gap-6">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-lg font-medium tracking-wide text-primary-foreground/85 hover:text-accent transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-4" asChild>
+              <Button variant="hero" size="lg" className="mt-4 w-full max-w-full min-h-[50px]" asChild>
                 <a href="#contato" onClick={() => setIsMobileMenuOpen(false)}>
                   Quero condições especiais
                 </a>
