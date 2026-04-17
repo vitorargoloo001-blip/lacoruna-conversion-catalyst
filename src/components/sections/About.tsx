@@ -1,7 +1,7 @@
 const About = () => {
   return (
-    <section id="empreendimento" className="relative py-14 sm:py-24 lg:py-32 bg-background">
-      <div className="container px-6">
+    <section id="empreendimento" className="section-light relative py-20 sm:py-28 lg:py-32 bg-background">
+      <div className="container px-5 sm:px-6 max-w-[1180px]">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-12">

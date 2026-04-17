@@ -9,11 +9,11 @@ const conditions = [
 
 const Conditions = () => {
   return (
-    <section id="condicoes" className="relative py-14 sm:py-24 lg:py-32 text-primary-foreground" style={{ background: 'var(--gradient-hero)' }}>
-      <div className="container px-6">
+    <section id="condicoes" className="section-dark relative py-20 sm:py-28 lg:py-32 text-primary-foreground" style={{ background: 'var(--gradient-hero)' }}>
+      <div className="container px-5 sm:px-6 max-w-[1180px]">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium tracking-[0.25em] uppercase border border-accent/50 bg-accent/10 text-accent rounded-sm">
               Condições Especiais
             </span>
@@ -26,12 +26,13 @@ const Conditions = () => {
           </div>
 
           {/* Conditions list */}
-          <div className="max-w-md mx-auto mb-8">
+          <div className="max-w-sm mx-auto mb-8">
             <div className="space-y-3">
               {conditions.map((condition, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 p-4 bg-primary-foreground/[0.04] border border-primary-foreground/20 rounded-sm transition-all duration-300 hover:border-accent/60"
+                  className="flex items-center gap-3 p-4 bg-primary-foreground/[0.06] border border-primary-foreground/20 rounded-md transition-all duration-300 hover:border-accent/60 hover:-translate-y-0.5"
+                  style={{ boxShadow: '0 10px 30px hsl(217 24% 10% / 0.15)' }}
                 >
                   <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
                   <span className="text-base font-medium text-primary-foreground">{condition}</span>
