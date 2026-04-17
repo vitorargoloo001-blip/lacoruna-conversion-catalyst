@@ -195,13 +195,15 @@ const ContactForm = () => {
                   />
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button variant="hero" size="xl" type="submit" className="flex-1">
-                    Falar com especialista
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-full">
+                  <Button variant="hero" size="lg" type="submit" className="w-full max-w-full sm:flex-1 min-h-[50px] px-4 lg:px-8 text-[12px] sm:text-[13px] lg:text-sm rounded-md">
+                    <span className="flex w-full max-w-full items-center justify-center gap-2 text-center">
+                      <span className="block leading-tight">Falar com especialista</span>
+                      <ArrowRight className="h-4 w-4 shrink-0" />
+                    </span>
                   </Button>
-                  <Button size="xl" type="button" className="flex-1 border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground" asChild>
-                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de receber a tabela do La Coruña." target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" type="button" asChild className="w-full max-w-full sm:flex-1 min-h-[50px] px-4 lg:px-8 text-[12px] sm:text-[13px] lg:text-sm border border-primary lg:border-2 bg-transparent text-primary hover:bg-primary hover:text-primary-foreground rounded-md">
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de receber a tabela do La Coruña." target="_blank" rel="noopener noreferrer" className="flex w-full max-w-full items-center justify-center text-center">
                       Receber tabela
                     </a>
                   </Button>
