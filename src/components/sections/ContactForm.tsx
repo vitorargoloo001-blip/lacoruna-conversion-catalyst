@@ -87,10 +87,13 @@ const ContactForm = () => {
   }
 
   return (
-    <section id="contato" className="relative py-14 sm:py-24 lg:py-32 overflow-hidden bg-card">
-      <div className="container px-6 relative z-10">
+    <section id="contato" className="section-light relative py-20 sm:py-28 lg:py-32 overflow-hidden bg-card">
+      <div className="container px-5 sm:px-6 max-w-[1180px] relative z-10">
         <div className="max-w-3xl mx-auto">
-          <div className="p-8 sm:p-12 lg:p-16 bg-background border border-primary/20 rounded-sm relative overflow-hidden">
+          <div
+            className="p-8 sm:p-12 lg:p-[60px] bg-background border border-primary/15 rounded-xl relative overflow-hidden"
+            style={{ boxShadow: '0 20px 60px hsl(217 24% 15% / 0.08)' }}
+          >
             <div className="relative z-10">
               <div className="w-24 h-24 mx-auto mb-8">
                 <img src={logoVertical} alt="La Coruña" className="w-full h-full object-contain" />

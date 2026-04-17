@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative py-12 sm:py-16 text-primary-foreground overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
+    <footer className="footer-fade-top relative py-12 sm:py-16 text-primary-foreground overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
       <img
         src={logoSymbol}
         alt=""
