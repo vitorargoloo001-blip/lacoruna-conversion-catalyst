@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Building2, Car, Layers, Home } from "lucide-react";
 import logoHero from "@/assets/logo-hero.png";
+import heroFrame from "@/assets/hero-frame.png";
 
 const fachada = "/fachada.png";
 
@@ -105,25 +106,26 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="opacity-0 animate-fade-up delay-200 relative mt-8 lg:mt-0">
-            <div className="relative">
+          <div className="opacity-0 animate-fade-up delay-200 relative mt-8 lg:mt-0 w-full flex justify-center">
+            <div
+              className="relative w-full max-w-[90%] md:max-w-[600px] lg:max-w-[680px] mx-auto flex items-center justify-center p-[30px] md:p-[50px] lg:p-[60px]"
+              style={{
+                backgroundImage: `url(${heroFrame})`,
+                backgroundSize: "100% 100%",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+            >
               <img
                 src={fachada}
                 alt="Fachada do La Coruña - Edifício residencial moderno em São Bernardo do Campo"
-                className="w-full max-w-full lg:max-w-none lg:w-auto max-h-[55vh] lg:max-h-[78vh] mx-auto object-contain"
+                className="w-[92%] md:w-[88%] lg:w-[85%] h-auto max-h-[48vh] lg:max-h-[68vh] object-contain"
                 style={{
                   filter: "contrast(1.08) saturate(1.12) brightness(1.02)",
                 }}
                 fetchPriority="high"
                 width={1024}
                 height={1408}
-              />
-              <div
-                className="absolute bottom-0 left-[15%] right-[15%] h-6 pointer-events-none"
-                style={{
-                  background: "radial-gradient(ellipse at center, hsl(217 30% 5% / 0.35) 0%, transparent 75%)",
-                  filter: "blur(10px)",
-                }}
               />
             </div>
           </div>
