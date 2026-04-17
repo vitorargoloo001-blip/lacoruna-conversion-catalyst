@@ -7,7 +7,7 @@ const fachada = "/fachada.png";
 
 const Hero = () => {
   return (
-    <section className="section-dark relative min-h-screen lg:h-auto lg:min-h-screen flex items-start pt-8 pb-16 lg:pb-24 lg:items-center lg:py-12 w-full max-w-full">
+    <section className="section-dark relative min-h-screen lg:min-h-screen flex items-start pt-2 lg:pt-4 pb-12 lg:pb-16 lg:items-start w-full max-w-full">
       <div
         className="absolute inset-0"
         style={{
