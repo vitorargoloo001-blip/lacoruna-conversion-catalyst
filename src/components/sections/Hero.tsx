@@ -88,14 +88,14 @@ const Hero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="opacity-0 animate-fade-up delay-300 flex flex-col gap-3 lg:gap-3 justify-center lg:justify-start items-center lg:items-start">
-              <Button variant="hero" size="lg" asChild className="w-[88%] max-w-[320px] sm:w-auto h-[52px] lg:h-11 text-[12px] sm:text-[13px] lg:text-sm px-3 lg:px-8 whitespace-normal lg:whitespace-nowrap mx-auto lg:mx-0 rounded-md">
-                <a href="#contato" className="w-full flex items-center justify-center gap-2 text-center min-w-0">
-                  <span className="block leading-tight">Quero condições especiais</span>
-                  <ArrowRight className="h-4 w-4 shrink-0" />
+            <div className="opacity-0 animate-fade-up delay-300 flex flex-col gap-3 lg:gap-3 justify-center lg:justify-start items-center lg:items-start w-full">
+              <Button variant="hero" size="lg" asChild className="w-[80%] max-w-[280px] sm:w-auto h-[48px] lg:h-11 text-[11px] sm:text-[13px] lg:text-sm px-3 lg:px-8 whitespace-normal lg:whitespace-nowrap mx-auto lg:mx-0 rounded-md">
+                <a href="#contato" className="w-full flex items-center justify-center gap-1.5 text-center min-w-0">
+                  <span className="block leading-tight truncate">Quero condições especiais</span>
+                  <ArrowRight className="h-3.5 w-3.5 shrink-0" />
                 </a>
               </Button>
-              <Button size="lg" asChild className="w-[88%] max-w-[320px] sm:w-auto h-[52px] lg:h-11 text-[12px] sm:text-[13px] lg:text-sm px-3 lg:px-8 border border-primary-foreground/50 lg:border-2 lg:border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary mx-auto lg:mx-0 rounded-md">
+              <Button size="lg" asChild className="w-[80%] max-w-[280px] sm:w-auto h-[48px] lg:h-11 text-[11px] sm:text-[13px] lg:text-sm px-3 lg:px-8 border border-primary-foreground/50 lg:border-2 lg:border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary mx-auto lg:mx-0 rounded-md">
                 <a href="#plantas" className="w-full flex items-center justify-center text-center min-w-0">
                   Ver plantas
                 </a>
