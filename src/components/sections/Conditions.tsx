@@ -53,11 +53,11 @@ const Conditions = () => {
           </div>
 
           {/* CTA */}
-          <div className="text-center">
-            <Button variant="hero" size="xl" asChild>
-              <a href="#contato">
-                Quero saber se me encaixo
-                <ArrowRight className="ml-2 h-5 w-5" />
+          <div className="flex justify-center w-full max-w-full px-2">
+            <Button variant="hero" size="lg" asChild className="w-full max-w-[360px] sm:max-w-[400px] min-h-[50px] px-4 lg:px-8 text-[12px] sm:text-[13px] lg:text-sm rounded-md">
+              <a href="#contato" className="flex w-full max-w-full items-center justify-center gap-2 text-center">
+                <span className="block leading-tight">Quero saber se me encaixo</span>
+                <ArrowRight className="h-4 w-4 shrink-0" />
               </a>
             </Button>
           </div>
